@@ -1,0 +1,24 @@
+/* ==============================
+   🎨 VARIABLES.CSS
+   Centraliza as variáveis globais de estilo
+============================== */
+
+:root {
+  /* === 🎨 Cores principais === */
+  --color-primary: #00d0fd;
+
+  /* === ⚪ Cores neutras === */
+  --color-white: #ffffff;
+  --color-light: #f9f9f9;
+  --color-light-gray: #e6e6e6;
+  --color-gray: #ccc;
+  --color-dark: #333333;
+  --color-black: #000000;
+
+  /* === 🧱 Backgrounds e superfícies === */
+  --bg-footer: var(--color-gray);
+
+  /* === ✍️ Tipografia === */
+  --font-base: 'Funnel Sans', sans-serif;
+  --font-size-base: 14px;
+}

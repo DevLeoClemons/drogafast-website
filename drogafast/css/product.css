@@ -1,0 +1,66 @@
+
+.container_prod{
+
+  border: 1px solid black;
+  height: 700px;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 10px;
+
+}
+
+.img_prod{
+
+  border: 1px solid black;
+  height: 680px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.img_prod img{
+
+height: 600px;
+
+}
+
+.lbl_prod{
+
+  width: 100%;
+  border: 1px solid black;
+  height: 680px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px;
+  align-items: flex-start;
+
+}
+
+.buttons_lbl_prod {
+  display: flex;        /* Coloca os botões lado a lado */
+  width: 100%;          /* Ocupa toda a largura da div pai */
+  gap: 10px;            /* Espaço entre os botões */
+  margin-top: 20px;     /* Espaço acima dos botões (opcional) */
+}
+
+.buttons_lbl_prod button {
+  flex: 1;              /* Faz cada botão ocupar metade do espaço */
+  height: 50px;         /* Altura dos botões */
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: #00D0FD;  /* Cor de fundo */
+  color: white;               /* Cor do texto */
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+.buttons_lbl_prod button:hover {
+  background-color: #00a8d1;  /* Efeito ao passar o mouse */
+}

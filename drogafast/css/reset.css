@@ -1,0 +1,56 @@
+/* =============================
+   RESET.CSS
+   Normaliza estilos entre navegadores
+============================= */
+
+/* Zera margens, paddings e bordas */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Zera estilos de listas e links */
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit; /* herda a cor do elemento pai */
+}
+
+/* Normaliza imagens e vídeos */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Zera estilos de tabelas */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Zera estilos de inputs e botões */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  outline: none;
+  border: none;
+  background: none;
+}
+
+/* Body padrão */
+body {
+  line-height: 1.5;
+  font-family: "Funnel Sans", sans-serif;
+}
