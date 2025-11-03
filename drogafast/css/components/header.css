@@ -1,5 +1,5 @@
 /* ==============================
-   COMPONENTS.CSS
+   COMPONENTS
    Estilos específicos de elementos reutilizáveis
 ============================== */
 
@@ -86,4 +86,46 @@
   align-items: center;
   justify-content: center;
   border-radius: 25px;
+}
+
+.header__right__btn-login,
+.header__right__btn-orders,
+.header__right__btn-cart {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: none;
+  cursor: pointer;
+  padding: 10px 18px 10px 10px;
+  gap: 6px;
+  border-radius: 25px;
+}
+
+.header__right__btn-login:hover,
+.header__right__btn-orders:hover,
+.header__right__btn-cart:hover {
+  background-color: #00cffd11;
+}
+
+.header__right__icons {
+  height: 30px;
+  color: var(--color-primary);
+}
+
+.header__right__lbl p {
+  margin-block: 0px;
+  font-size: 14px;
+  display: flex;
+}
+
+.header__right__lbl__p__top {
+  font-weight: 200;
+  color: #404040;
+}
+
+.header__right__p__bottom {
+  font-weight: 600;
+  color: #303030;
 }

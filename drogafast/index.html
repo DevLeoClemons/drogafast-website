@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="css/layout.css" />
     <link rel="stylesheet" href="css/components/buttons.css" />
     <link rel="stylesheet" href="css/components/header.css" />
+    <link rel="stylesheet" href="css/components/nav.css" />
     <link rel="stylesheet" href="css/index.css" />
 
     <link rel="icon" href="img/page_icon.ico" type="image/x-icon" />
@@ -53,9 +54,9 @@
         </form>
       </div>
       <div class="header__right">
-        <button class="btn_h_right_login">
+        <button class="header__right__btn-login">
           <svg
-            class="icons_h_right"
+            class="header__right__icons"
             viewBox="0 0 24 24"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -84,15 +85,15 @@
               ></path>
             </g>
           </svg>
-          <div class="lbl_h_right">
-            <p class="p_top">Boas-vindas!</p>
-            <p class="p_bottom">Entrar ou cadastrar</p>
+          <div class="header__right__lbl">
+            <p class="header__right__lbl__p__top">Boas-vindas!</p>
+            <p class="header__right__p__bottom">Entrar ou cadastrar</p>
           </div>
         </button>
 
-        <button class="btn_h_right_orders">
+        <button class="header__right__btn-orders">
           <svg
-            class="icons_h_right"
+            class="header__right__icons"
             fill="#00D0FD"
             viewBox="0 0 256 256"
             id="Flat"
@@ -114,15 +115,15 @@
               ></path>
             </g>
           </svg>
-          <div class="lbl_h_right">
-            <p class="p_top">Acompanhar</p>
-            <p class="p_bottom">pedidos</p>
+          <div class="header__right__lbl">
+            <p class="header__right__lbl__p__top">Acompanhar</p>
+            <p class="header__right__p__bottom">pedidos</p>
           </div>
         </button>
 
-        <button class="btn_h_right_cart">
+        <button class="header__right__btn-cart">
           <svg
-            class="icons_h_right"
+            class="header__right__icons"
             viewBox="0 0 24 24"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -143,19 +144,19 @@
               ></path>
             </g>
           </svg>
-          <div class="lbl_h_right">
-            <p class="p_top">Carrinho</p>
-            <p class="p_bottom">R$ 0,00</p>
+          <div class="header__right__lbl">
+            <p class="header__right__lbl__p__top">Carrinho</p>
+            <p class="header__right__p__bottom">R$ 0,00</p>
           </div>
         </button>
       </div>
     </header>
 
-    <nav>
-      <div class="nav_left">
-        <button class="but_cep" id="cepButton">
+    <nav class="nav">
+      <div class="nav__left">
+        <button class="nav__right__btn-cep" id="cepButton">
           <svg
-            class="icon_address"
+            class="nav__right__btn-cep__icon"
             fill="#000000"
             viewBox="0 0 32 32"
             version="1.1"
@@ -174,7 +175,7 @@
             </g>
           </svg>
 
-          <div class="cep_main_lbl">
+          <div class="nav__right__btn-cep__main-lbl">
             <div class="lbl_address">
               <p>Insira seu CEP</p>
             </div>
@@ -228,7 +229,7 @@
           <p>Baixe o app</p>
         </button>
       </div>
-      <div class="nav_right">
+      <div class="nav__right">
         <button class="btn">
           <p>Exibir descontos Fast</p>
         </button>

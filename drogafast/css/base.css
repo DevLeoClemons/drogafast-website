@@ -4,9 +4,23 @@
 ============================== */
 
 /* Corpo do site */
+
+html,
 body {
+  width: 100%;
+  overflow-x: hidden; /* impede rolagem lateral */
+}
+
+body {
+  padding: 15px 50px;
+  margin: 0;
   font-family: var(--font-base);
   font-size: var(--font-size-base);
+  background: white;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  box-sizing: border-box;
 }
 
 /* Títulos */

@@ -1,0 +1,68 @@
+/* ==============================
+   COMPONENTS
+   Estilos específicos de elementos reutilizáveis
+============================== */
+
+/* === Nav === */
+
+.nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 25px;
+  }
+
+  .nav__left {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+  }
+  
+  .nav__left p {
+    font-size: 15px;
+  }
+  
+  .nav__right {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .nav button {
+    display: flex;
+    flex-direction: row;
+    border: none;
+    background: none;
+    align-items: center;
+    gap: 6px;
+    font-family: "Funnel Sans", sans-serif;
+    font-size: 15px;
+    cursor: pointer;
+    padding-inline: 14px;
+  }
+
+  .nav__right__btn-cep {
+    display: flex;
+    flex-direction: row;
+    border: none;
+    background: none;
+    align-items: center;
+    gap: 6px;
+    font-family: "Funnel Sans", sans-serif;
+    font-size: 15px;
+    cursor: pointer;
+    padding: 0px;
+  }
+
+  .nav__right__btn-cep__icon {
+    height: 20px;
+  }
+
+  .nav__right__btn-cep__main-lbl {
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+  }
+
+  .address-lbl {
+    max-width: 96px;
+  }
