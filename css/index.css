@@ -1,26 +1,24 @@
-
 p {
-  margin: 0;
+	margin: 0;
 }
 
 
 
 .lbl_address p {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  text-decoration: underline;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	text-decoration: underline;
 }
 
 .lbl_cep {
-  text-decoration: underline;
+	text-decoration: underline;
 }
 
-.but_all_cat {
-}
+.but_all_cat {}
 
 .icon_menu {
-  height: 20px;
+	height: 20px;
 }
 
 .but_farm,
@@ -29,216 +27,224 @@ p {
 .but_desc_ben,
 .but_loj,
 .but_baixe {
-  color: #505050;
-  font-size: 14px;
+	color: #505050;
+	font-size: 14px;
 }
 
 .main_content {
-  flex-grow: 1;
+	flex-grow: 1;
+
 }
 
 .carousel-area {
-  border-radius: 25px;
-  overflow: hidden;
-  margin-bottom: 30px;
+	border-radius: 25px;
+	overflow: hidden;
+	margin-bottom: 30px;
 }
 
 .carousel-area img {
-  height: 300px;
-  width: 100%;
-  object-fit: cover; /* mantém proporção e corta o excesso */
-  display: block;
+	height: 300px;
+	width: 100%;
+	object-fit: cover;
+	/* mantém proporção e corta o excesso */
+	display: block;
 }
 
 .products {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  gap: 10px;
-  overflow-x: auto;
-  padding-bottom: 10px;
-  -webkit-overflow-scrolling: touch;
-  margin-bottom: 30px;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	gap: 10px;
+	overflow-x: auto;
+	padding-bottom: 10px;
+	-webkit-overflow-scrolling: touch;
+	margin-bottom: 30px;
 }
 
 .card {
-  flex: 0 0 212px; /* mantém o tamanho do card fixo e impede encolhimento */
-  min-width: 212px;
+	flex: 0 0 212px;
+	/* mantém o tamanho do card fixo e impede encolhimento */
+	min-width: 212px;
 }
 
 .card-body {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 }
 
 .card:hover {
-  border-color: #909090;
+	border-color: #909090;
 }
 
 .h1_products {
-  font-family: "Funnel Sans", sans-serif;
-  font-weight: bold;
-  font-size: 25px;
-  margin-bottom: 30px;
+	font-family: "Funnel Sans", sans-serif;
+	font-weight: bold;
+	font-size: 25px;
+	margin-bottom: 30px;
 }
 
 .card-title {
-  font-size: 16px;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  display: box;
-  line-clamp: 2;
-  box-orient: vertical;
-  overflow: hidden;
-  text-overflow: ellipsis;
+	font-size: 16px;
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+	display: box;
+	line-clamp: 2;
+	box-orient: vertical;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 
 .card-value {
-  font-weight: bold;
+	font-weight: bold;
 }
 
 footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: var(--color-light);
-  margin-top: 100px;
-  gap: 20px;
-  height: 150px;
-  padding: 15px;
-  width: 100%;
-  margin-inline: 0;
-  border-radius: 25px;
-  box-sizing: border-box;
-  align-self: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--color-light);
+	margin-top: 100px;
+	gap: 20px;
+	height: 150px;
+	padding: 15px;
+	width: 100%;
+	margin-inline: 0;
+	border-radius: 25px;
+	box-sizing: border-box;
+	align-self: center;
 }
 
 .card_foo {
-  background-color: white;
-  flex: 1;
-  height: 95%;
-  border-radius: 25px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: start;
-  padding: 30px;
-  box-sizing: border-box;
-  border: none;
-  font-size: medium;
-  text-align: start;
-  font-family: "Funnel Sans", sans-serif;
-  color: #404040;
+	background-color: white;
+	flex: 1;
+	height: 95%;
+	border-radius: 25px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: start;
+	padding: 30px;
+	box-sizing: border-box;
+	border: none;
+	font-size: medium;
+	text-align: start;
+	font-family: "Funnel Sans", sans-serif;
+	color: #404040;
 }
 
 .card_foo:hover {
-  background-color: rgb(240, 240, 240);
+	background-color: rgb(240, 240, 240);
 }
 
 .lg_card_foo {
-  height: 20px;
-  fill: #f20000;
+	height: 20px;
+	fill: #f20000;
 }
 
 @media (max-width: 1360px) {
-  .but_baixe {
-    display: none;
-  }
+	.but_baixe {
+		display: none;
+	}
 
-  body {
-    padding-inline: 40px;
-  }
+	body {
+		padding-inline: 40px;
+	}
 }
 
 @media (max-width: 1250px) {
-  .but_loj {
-    display: none;
-  }
+	.but_loj {
+		display: none;
+	}
 
-  body {
-    padding-inline: 30px;
-  }
+	body {
+		padding-inline: 30px;
+	}
 }
 
 @media (max-width: 1105px) {
-  .but_desc_ben {
-    display: none;
-  }
+	.but_desc_ben {
+		display: none;
+	}
 
-  body {
-    padding-inline: 20px;
-  }
+	body {
+		padding-inline: 20px;
+	}
 }
+
 @media (max-width: 1024px) {
-  .h_center {
-    flex-basis: 100%;
-    order: 3;
-  }
+	.h_center {
+		flex-basis: 100%;
+		order: 3;
+	}
 
-  .btn_h_right_login,
-  .btn_h_right_orders {
-    display: none;
-  }
+	.btn_h_right_login,
+	.btn_h_right_orders {
+		display: none;
+	}
 
-  .but_all_cat,
-  .but_farm,
-  .but_blog,
-  .but_serv,
-  .fast_disc {
-    display: none;
-  }
+	.but_all_cat,
+	.but_farm,
+	.but_blog,
+	.but_serv,
+	.fast_disc {
+		display: none;
+	}
 
-  .but_baixe,
-  .btn_h_right_login,
-  .btn_h_right_orders {
-    display: none;
-  }
+	.but_baixe,
+	.btn_h_right_login,
+	.btn_h_right_orders {
+		display: none;
+	}
 }
 
 @media (max-width: 500px) {
-  body {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-  }
+	body {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+	}
 
-  header {
-    /* 
+	header {
+		/* 
     justify-content: center;
     align-items: center;
     padding-block: 25px; */
-  }
+	}
 
-  .logo {
-    width: 175px;
-  }
+	.logo {
+		width: 175px;
+	}
 
-  .h_center {
-    flex-basis: 100%;
-  }
+	.h_center {
+		flex-basis: 100%;
+	}
 
-  input,
-  .but_entrar {
-    font-size: 14px;
-    padding: 8px;
-  }
+	input,
+	.but_entrar {
+		font-size: 14px;
+		padding: 8px;
+	}
 
-  .out_met {
-    font-size: small;
-  }
+	.out_met {
+		font-size: small;
+	}
 
-  .out_met::before,
-  .out_met::after {
-    width: 25px;
-  }
+	.out_met::before,
+	.out_met::after {
+		width: 25px;
+	}
 
-  .card_of_login {
-    padding-inline: 25px;
-  }
+	.card_of_login {
+		padding-inline: 25px;
+	}
 
-  .of_logos {
-    height: 25px;
-  }
+	.of_logos {
+		height: 25px;
+	}
+}
+
+.cart-section{
+	margin-bottom: 75px;
 }
