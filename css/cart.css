@@ -53,15 +53,21 @@ body {
   width: 100px;
 }
 
+
 /* =============================
    RESUMO DO PEDIDO
 ============================= */
 .resume {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   padding: 15px;
+  padding-bottom: 0px;
   margin-top: 20px;
   border: 1px solid #e6e6e6;
   border-radius: 20px;
   box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.611);
+  height: auto;
 }
 
 .resume-mobile {
@@ -79,6 +85,7 @@ body {
   box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.611);
   background-color: white;
   border-radius: 0px;
+
 
 }
 
@@ -411,4 +418,13 @@ body {
   .resume {
     display: none;
   }
+}
+.card-body{
+  /* margin-top: 50px; */
+  display: flex;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  height: 50px;
+  
+  
 }
