@@ -20,8 +20,10 @@
     <link rel="stylesheet" href="css/base.css" />
     <link rel="stylesheet" href="css/layout.css" />
     <link rel="stylesheet" href="css/components/buttons.css" />
+    <link rel="stylesheet" href="css/components/footer.css" />
+    <link rel="stylesheet" href="css/components/header_log_sig_temp.css" />
     <link rel="stylesheet" href="css/components/cards.css" />
-    <link rel="stylesheet" href="css/login.css" />
+    <link rel="stylesheet" href="css/components/form.css" />
 
     <link rel="icon" href="img/page_icon.ico" type="image/x-icon" />
   </head>
@@ -38,31 +40,19 @@
       </div>
     </header>
 
-    <div class="container_log">
-      <form class="login-form">
-        <h2 class="h2_login">Login</h2>
-        <label for="email">E-mail</label>
-        <input class="input_email" type="email" id="email" required />
+    <h2>Entrar</h2>
 
-        <label for="password">Senha</label>
-        <input class="input_senha" type="password" id="password" required />
+    <form action="" method="POST">
+      <label for="username">Usuário ou e-mail:</label>
+      <input type="text" id="username" name="username" required>
 
-        <button class="but_entrar" type="submit">Entrar</button>
-        <a href="" class="botao_esqueci_senha">Esqueci a senha</a>
-        <div class="out_met_box">
-          <line></line>
-          <p class="out_met">Outros métodos de entrada</p>
-        </div>
-        <div class="div_outras_formas">
-          <button class="card_of_login">
-            <img class="of_logos" src="img/google.png" alt="" />
-          </button>
-          <button class="card_of_login">
-            <img class="of_logos" src="img/facebook.png" alt="" />
-          </button>
-        </div>
-      </form>
-    </div>
+      <label for="password">Senha:</label>
+      <input type="password" id="password" name="password" required>
+
+      <button type="submit">Entrar</button>
+    </form>
+
+  <p>Não tem conta? <a href="/cadastro.html">Cadastre-se</a></p>
 
     <footer>
       <button class="card_foo">
