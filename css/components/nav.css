@@ -66,3 +66,30 @@
   .address-lbl {
     max-width: 96px;
   }
+
+  .address-lbl p {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	text-decoration: underline;
+}
+
+.lbl_cep {
+	text-decoration: underline;
+}
+
+.but_all_cat {}
+
+.icon_menu {
+	height: 20px;
+}
+
+.but_farm,
+.but_blog,
+.but_serv,
+.but_desc_ben,
+.but_loj,
+.but_baixe {
+	color: #505050;
+	font-size: 14px;
+}
