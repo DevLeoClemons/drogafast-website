@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="css/components/buttons.css" />
     <link rel="stylesheet" href="css/components/header.css" />
     <link rel="stylesheet" href="css/components/nav.css" />
+    <link rel="stylesheet" href="css/components/footer.css" />
     <link rel="stylesheet" href="css/index.css" />
 
     <link rel="icon" href="img/page_icon.ico" type="image/x-icon" />
@@ -54,7 +55,7 @@
         </form>
       </div>
       <div class="header__right">
-        <button class="header__right__btn-login">
+        <button class="header__right__btn-login" onclick="window.location.href='login.html'" >
           <svg
             class="header__right__icons"
             viewBox="0 0 24 24"
@@ -153,10 +154,9 @@
     </header>
 
     <nav class="nav">
-      <div class="nav__left">
-        <button class="nav__right__btn-cep" id="cepButton">
+        <button class="nav__btn-cep" id="cepButton">
           <svg
-            class="nav__right__btn-cep__icon"
+            class="nav__btn-cep__icon"
             fill="#000000"
             viewBox="0 0 32 32"
             version="1.1"
@@ -175,7 +175,7 @@
             </g>
           </svg>
 
-          <div class="nav__right__btn-cep__main-lbl">
+          <div class="nav__btn-cep__main-lbl">
             <div class="lbl_address">
               <p>Insira seu CEP</p>
             </div>
@@ -184,7 +184,7 @@
             </div>
           </div>
         </button>
-        <button class="but_all_cat">
+        <button class="but_all_cat nav__btn">
           <svg
             class="icon_menu"
             viewBox="0 0 24 24"
@@ -228,12 +228,9 @@
         <button class="but_baixe">
           <p>Baixe o app</p>
         </button>
-      </div>
-      <div class="nav__right">
         <button class="btn">
           <p>Exibir descontos Fast</p>
         </button>
-      </div>
     </nav>
 
     <div class="main_content">
@@ -315,7 +312,7 @@
         </div>
 
         <div class="products">
-          <div class="card" style="width: 18rem">
+          <div class="card" style="width: 18rem" onclick="window.location.href='product.html'">
             <img src="img/card_prod_1.png" class="card-img-top" alt="..." />
             <div class="card-body">
               <h5 class="card-title">

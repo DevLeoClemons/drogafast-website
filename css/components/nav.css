@@ -12,35 +12,13 @@
     margin-bottom: 25px;
   }
 
-  .nav__left {
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-  }
-  
-  .nav__left p {
+
+  .nav p {
     font-size: 15px;
   }
-  
-  .nav__right {
-    display: flex;
-    justify-content: flex-end;
-  }
 
-  .nav button {
-    display: flex;
-    flex-direction: row;
-    border: none;
-    background: none;
-    align-items: center;
-    gap: 6px;
-    font-family: "Funnel Sans", sans-serif;
-    font-size: 15px;
-    cursor: pointer;
-    padding-inline: 14px;
-  }
 
-  .nav__right__btn-cep {
+  .nav__btn {
     display: flex;
     flex-direction: row;
     border: none;
@@ -53,11 +31,24 @@
     padding: 0px;
   }
 
-  .nav__right__btn-cep__icon {
+  .nav__btn-cep {
+    display: flex;
+    flex-direction: row;
+    border: none;
+    background: none;
+    align-items: center;
+    gap: 6px;
+    font-family: "Funnel Sans", sans-serif;
+    font-size: 15px;
+    cursor: pointer;
+    padding: 0px;
+  }
+
+  .nav__btn-cep__icon {
     height: 20px;
   }
 
-  .nav__right__btn-cep__main-lbl {
+  .nav__btn-cep__main-lbl {
     display: flex;
     flex-direction: row;
     gap: 4px;
@@ -66,3 +57,30 @@
   .address-lbl {
     max-width: 96px;
   }
+
+  .address-lbl p {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	text-decoration: underline;
+}
+
+.lbl_cep {
+	text-decoration: underline;
+}
+
+.but_all_cat {}
+
+.icon_menu {
+	height: 20px;
+}
+
+.but_farm,
+.but_blog,
+.but_serv,
+.but_desc_ben,
+.but_loj,
+.but_baixe {
+	color: #505050;
+	font-size: 14px;
+}

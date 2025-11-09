@@ -1,0 +1,87 @@
+/* ---------- FORMULÁRIO ---------- */
+.h2-reg{
+    margin: 2rem auto;
+}
+
+.form-reg {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto 2rem auto;
+  
+}
+
+/* ---------- CAMPOS ---------- */
+.label-reg {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.input-reg,
+.select-reg {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+/* ---------- BOTÃO ---------- */
+.button-reg {
+  width: 100%;
+  padding: 0.9rem;
+  background-color: var(--color-primary);
+  color: white;
+  border: none;
+  border-radius: 25px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.button-reg:hover {
+  background-color: var(--color-primary-dark);
+}
+
+.p-reg{
+    margin: 0 auto;
+}
+
+.linha-dupla {
+  display: flex;
+  gap: 1rem; /* espaço entre os campos */
+}
+
+.campo {
+  flex: 1; /* faz os dois campos ocuparem metade do espaço cada */
+  display: flex;
+  flex-direction: column; /* mantém o label acima do input */
+}
+
+.header__right, .header__center{
+    display: none;
+}
+
+/* Ajuste para telas pequenas */
+@media (max-width: 600px) {
+  .linha-dupla {
+    flex-direction: column; /* empilha os campos no celular */
+  }
+}
+
+
+/* ---------- RESPONSIVIDADE ---------- */
+@media (max-width: 480px) {
+  form {
+    padding: 1.2rem;
+  }
+
+  input, select, button {
+    font-size: 0.95rem;
+  }
+}

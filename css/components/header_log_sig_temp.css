@@ -1,0 +1,45 @@
+header {
+  padding: 0px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgb(230, 230, 230);
+  height: 62px;
+}
+
+.h_left {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+
+.logo {
+  width: 170px;
+  margin-right: 10px;
+  margin-left: 0px;
+}
+
+
+.cent_ate_but {
+  background: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s;
+  font-family: "Funnel Sans", sans-serif;
+}
+
+.cent_ate_but:hover {
+  background: none;
+}
+
+.headset_svg {
+  height: 20px;
+}
