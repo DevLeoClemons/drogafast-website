@@ -41,6 +41,18 @@ height: 600px;
 
 }
 
+.desc-carac{
+  border: 1px solid black;
+}
+
+.descricao{
+  border: 1px solid black;
+}
+
+.caracteristicas{
+  border: 1px solid black;
+}
+
 .buttons_lbl_prod {
   display: flex;        /* Coloca os botões lado a lado */
   width: 100%;          /* Ocupa toda a largura da div pai */
