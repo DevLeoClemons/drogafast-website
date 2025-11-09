@@ -1,0 +1,151 @@
+/* styles.css */
+:root {
+  --primary-color: #d30000;
+  --border-color: #c8c8c8;
+  --text-color: #333;
+  --input-bg: #fff;
+  --method-bg-active: #fff5f5;
+  --radius: 6px;
+  --transition: 0.25s ease;
+}
+
+body {
+  font-family: sans-serif;
+  background: #fff;
+  color: var(--text-color);
+}
+
+.payment-container {
+  width: 420px;
+  margin: 0;
+}
+
+.payment-methods {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.method {
+  flex: 1;
+  padding: 14px;
+  border: 2px solid var(--border-color);
+  background: #fff;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: var(--transition);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: center;
+}
+
+.method.active {
+  border-color: #00d0fd;
+  background: var(--method-bg-active);
+  color: #00d0fd;
+}
+.aa::placeholder{
+padding: 12px;
+}
+
+.title {
+  margin-bottom: 18px;
+}
+
+
+.input-group {
+  margin-bottom: 14px;
+  
+ 
+}
+
+
+.input-group input,
+.row input,
+.input-group select {
+  width: 100%;
+  padding: 12px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border-color);
+  background: var(--input-bg);
+  outline: none;
+  transition: var(--transition);
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 14px;
+  max-width: 420px;
+  
+}
+
+input:focus,
+select:focus {
+  border-color: var(--primary-color);
+}
+
+.checkbox {
+  font-size: 14px;
+  display: flex;
+  gap: 8px;
+  justify-items: start;
+ 
+}
+footer.position-absolute{
+ bottom: 0;
+  position: absolute;
+  bottom: 0px;
+
+}
+.white-left{
+  justify-items: center;
+}
+.data-cart{
+  display: flex;
+  flex-direction: column;
+  width: 420px;
+  align-content: center;
+}
+.card-form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.div-support-header{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+}
+.h_right{
+  justify-items: center;
+}
+.stepper-mobile {
+display: none;
+align-items: center;
+gap: 60px;
+left: 50%;
+}
+.check-header{
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 850px) {
+.check-header{
+  display: flex;
+  justify-content: space-between;
+  height: 130px;
+}
+.stepper{
+  display: none;
+}
+.stepper-mobile{
+  display: flex;
+}
+}
+
