@@ -1,9 +1,9 @@
 /* ---------- FORMULÁRIO ---------- */
-h2{
+.h2-reg{
     margin: 2rem auto;
 }
 
-form {
+.form-reg {
   background-color: white;
   padding: 2rem;
   border-radius: 10px;
@@ -15,14 +15,14 @@ form {
 }
 
 /* ---------- CAMPOS ---------- */
-label {
+.label-reg {
   display: block;
   margin-bottom: 0.5rem;
   font-weight: bold;
 }
 
-input,
-select {
+.input-reg,
+.select-reg {
   width: 100%;
   padding: 0.8rem;
   border: 1px solid #ccc;
@@ -32,7 +32,7 @@ select {
 }
 
 /* ---------- BOTÃO ---------- */
-button {
+.button-reg {
   width: 100%;
   padding: 0.9rem;
   background-color: var(--color-primary);
@@ -44,11 +44,11 @@ button {
   transition: background 0.2s;
 }
 
-button:hover {
+.button-reg:hover {
   background-color: var(--color-primary-dark);
 }
 
-p{
+.p-reg{
     margin: 0 auto;
 }
 
@@ -61,6 +61,10 @@ p{
   flex: 1; /* faz os dois campos ocuparem metade do espaço cada */
   display: flex;
   flex-direction: column; /* mantém o label acima do input */
+}
+
+.header__right, .header__center{
+    display: none;
 }
 
 /* Ajuste para telas pequenas */

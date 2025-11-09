@@ -1,9 +1,10 @@
 header {
-  padding: 5px 30px;
+  padding: 0px 0px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   border-bottom: 1px solid rgb(230, 230, 230);
+  height: 62px;
 }
 
 .h_left {
@@ -13,9 +14,13 @@ header {
   gap: 10px;
 }
 
+
 .logo {
-  width: 200px;
+  width: 170px;
+  margin-right: 10px;
+  margin-left: 0px;
 }
+
 
 .cent_ate_but {
   background: none;
