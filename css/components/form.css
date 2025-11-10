@@ -63,9 +63,10 @@
   flex-direction: column; /* mantém o label acima do input */
 }
 
-.header__right, .header__center{
-    display: none;
+.hide{
+  display: none;
 }
+
 
 /* Ajuste para telas pequenas */
 @media (max-width: 600px) {
