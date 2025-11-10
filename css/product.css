@@ -1,24 +1,24 @@
-
 .container_prod{
 
-  border: 1px solid black;
-  height: 700px;
+  /* border: 1px solid black; */
   padding: 10px;
   display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  gap: 10px;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+  align-items: flex-start;
 
 }
 
 .img_prod{
 
-  border: 1px solid black;
-  height: 680px;
-  width: 100%;
+
+  flex: 1;
+  border: 1px solid var(--color-gray);
+  border-radius: 15px;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 10px;
 
 }
 
@@ -30,27 +30,83 @@ height: 600px;
 
 .lbl_prod{
 
-  width: 100%;
-  border: 1px solid black;
-  height: 680px;
+  flex: 1;
+  border: 1px solid var(--color-gray);
+  border-radius: 15px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   padding: 10px;
   align-items: flex-start;
 
 }
 
 .desc-carac{
-  border: 1px solid black;
+  /* border: 1px solid black; */
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start; /* impede que as internas estiquem */
+  padding: 10px;
 }
 
 .descricao{
+  background-color: var(--color-super-light-gray);
+  border-radius: 10px;
   border: 1px solid black;
+  flex: 1;
+  padding: 10px;
+}
+
+.descricao ul{
+  list-style-type: disc;
+}
+
+.descricao h2{
+
+  font-size: 1.2rem;
+  margin-bottom: 0.4rem;
+
+}
+
+.descricao p{
+
+  margin-bottom: 1.2rem;
+}
+
+.descricao li{
+
+  margin-bottom: 0.3rem;
+
 }
 
 .caracteristicas{
+  background-color: var(--color-super-light-gray);
+  border-radius: 10px;
   border: 1px solid black;
+  flex: 1;
+  padding: 10px;
+}
+
+.caracteristicas div{
+  display: flex;
+  justify-content: space-between;
+}
+
+.caracteristicas h2{
+
+  font-size: 1.2rem;
+  margin-bottom: 0.8rem;
+
+}
+.caracteristicas p{
+
+  font-size: 1.2rem;
+
+}
+.caracteristicas hr{
+
+  margin-block: 0.5rem;
+
 }
 
 .buttons_lbl_prod {
