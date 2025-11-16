@@ -1,23 +1,10 @@
 
-main{
+.checkout__content{
   display: flex;
   width: 100%;
-  height:377px
+  margin-top: 0;
 }
-.check-header {
-
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100px;
-  width: 100%;
-  z-index: 200;
-  background-color: white;
-  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.415);
-  
- 
-  justify-content: space-between;
-}
+/* .checkout__header styles moved to css/components/header.css - HTML uses .header class */
 .div-support-header{
   display: flex;
   justify-content: space-between;
@@ -29,19 +16,67 @@ main{
   text-align: start;
 }
 
+/* BEM aliasing: keep legacy classnames working while introducing BEM names */
+/* Use these when gradually moving HTML to the BEM classes */
+.div-support-header, .checkout__support {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.checkout-title, .checkout__title {
+  text-align: start;
+}
+.title-medium, .checkout__title--medium {
+  margin-bottom: 5px;
+}
+.light-text-start, .checkout__light-text--start {
+  margin: 0;
+}
+.light-text, .checkout__light-text {
+  opacity: 0.75;
+}
+.stepper, .checkout__stepper {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  position: relative;
+}
+.stepper-mobile, .checkout__stepper--mobile {
+  display: none;
+  align-items: center;
+  gap: 60px;
+}
+.step, .checkout__step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+.circle, .checkout__step-circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 3px solid var(--inactive-color);
+  background: #e3e3e3;
+}
+.circle-selected, .checkout__step-circle--selected {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  border: 3px solid var(--inactive-color);
+  background: #00d0fd;
+}
+
+
 .grey-back {
-  position: absolute;
-  right: 0;
-  left: 0;
   display: flex;
   flex-direction: row;
   background-color: #f5f5f5;
-  /* align-items: center; */
   justify-content: center;
-
+  width: 100%;
 }
 
-.white-left {
+.checkout__col--left {
   border-radius: 3px;
   width: 65%;
   margin: 40px 15px 40px 15px;
@@ -50,14 +85,14 @@ main{
   height: fit-content;
 }
 
-.white-right {
+.checkout__col--right {
   border-radius: 3px;
   width: 35%;
   background-color: white;
   margin: 40px 15px 40px 15px;
   padding: 15px;
   margin-bottom: 200px;
-  height: 100%;
+  height: auto;
 }
 
 .title-medium,
@@ -66,7 +101,7 @@ main{
   margin-bottom: 5px;
 }
 
-.square {
+.checkout__square {
   padding: 15px;
   display: flex;
   border: 2px solid #e6e6e6;
@@ -74,11 +109,11 @@ main{
   gap: 10px;
 }
 
-.right-square {
+.checkout__right {
   width: 40%;
 }
 
-.left-square {
+.checkout__left {
   display: flex;
   flex-direction: column;
   width: 60%;
@@ -89,14 +124,14 @@ main{
 
 
 /* ------------radio button-------------- */
-.left-square {
+.checkout__left {
   display: flex;
   flex-direction: column;
   align-content: start;
   gap: 10px;
 }
 
-.option {
+.checkout__option {
   display: flex;
   border: 2px solid #e6e6e6;
   margin: 0;
@@ -105,20 +140,20 @@ main{
   transition: background-color 0.4s;
 }
 
-.valor-entrega-square {
+.checkout__valor-entrega {
   text-align: end;
   width: 50%;
 
 }
 
 p,
-.valor-entrega-square {
+.checkout__valor-entrega {
   margin: 0;
   align-content: center;
   padding-right: 20px;
 }
 
-.opcao-entrega-square {
+.checkout__opcao-entrega {
  justify-content: center;
  width: 60%;
 padding-top: 5px;
@@ -127,72 +162,86 @@ padding-bottom: 5px;
   
 }
 
-.circle-icon {
+.checkout__circle-icon {
   min-width: 15px;
   max-width: 15px;
   opacity: 50%;
 }
 
-.img-icon-div {
+.checkout__img-icon-div {
   align-content: center;
   padding: 15px 20px;
 }
-.option-div{
+.checkout__option-div{
   display: flex;
   flex-direction: column;
   gap: 5px;
 }
-.option:hover{
+.checkout__option:hover{
 background-color: #e6e6e6;
 }
-.product-square{
+.checkout__product{
   display: flex;
   vertical-align: center;
   height: 90%;
   align-items: center;
 }
-.product-details{
+.checkout__product-details{
   align-content: center;
 }
-.img-product{
+.checkout__product-img{
   min-width: 80px;
   width: 80px;
   justify-items: center;
 
 }
-.product-center{
+.checkout__product-center{
 justify-items: center;
 }
 
 .light-text{
-  opacity: 75%;
+  opacity: 0.75;
 }
 
 
-.resume{
+.checkout__summary{
   height: 100%;
   width: 100%;
   border: 0px;
 }
-.card-body{
+.checkout__actions{
   display: flex;
-  margin-top: 100px;
+  margin-top: 20px;
   flex-direction: column;
-  gap: 20px;
+  gap: 12px;
   justify-content: center;
 }
-.but-prosseguir,
-.but-continuar-comprando{
+.checkout__btn,
+.checkout__btn--continue{
   margin: 0;
   width: 100%;
 }
 
-/* --------------HEADER--------------- */
+.btn-grey{
+  
+  padding: 12px;
+  background-color: white;
+  color: rgb(48, 48, 48);
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  transition: 0.3s;
+  height: 49px;
+  font-family: "Funnel Sans", sans-serif;
 
-:root {
-padding: 40px;
 }
-
+.btn-grey:hover{
+  background-color: #e6e6e6;
+  color: rgb(48, 48, 48);
+}
+/* --------------HEADER--------------- */
 
 .stepper {
 display: flex;
@@ -265,7 +314,7 @@ color: var(--text-active);
 
 /* ------------MOBILE----------- */
 
-.resume-mobile {
+.checkout__summary--mobile {
 
   display: none;
   position: fixed;
@@ -285,7 +334,7 @@ color: var(--text-active);
 
 }
 
-.card-body-mobile {
+.checkout__actions--mobile {
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -305,35 +354,36 @@ color: var(--text-active);
  
 }
 @media (max-width: 850px) {
-  .check-header{
+  .checkout__header{
   display: flex;
   justify-content: space-between;
   height: 130px;
 }
-.white-right{
+.checkout__col--right{
   display: none;
 }
-.white-left{
+.checkout__col--left{
   width: 100%;
 }
-.square{
+.checkout__square{
   flex-direction: column;}
- .option-div{
+ .checkout__option-div{
   width: 100%;
  }
- .left-square{
+ .checkout__left{
   width: 100%;
  }
- .right-square{
+ .checkout__right{
   width: 100%;
   justify-items: center;
- }.product-square{
+ }
+ .checkout__product{
   flex-direction: column;
  }
  .light-text{
   text-align: center;
  }
- .resume-mobile {
+ .checkout__summary--mobile {
     display: block !important;
     height: 30% !important;
     transform: translateY(0);
@@ -356,7 +406,7 @@ color: var(--text-active);
   display: none;
 }
 }
-.check-header {
+.checkout__header {
   position: fixed;
   top: 0;
   left: 0;
@@ -371,28 +421,11 @@ color: var(--text-active);
   justify-content: center;
 }
 
-.div-support-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.stepper {
-  display: flex;
-  align-items: center;
-  gap: 60px;
-}
-
-.stepper-mobile {
-  display: none;
-  align-items: center;
-  justify-content: center;
-  gap: 30px;
-}
+/* Header styles consolidated in css/components/header.css */
 
 /* RESPONSIVO */
 @media (max-width: 850px) {
-  .check-header {
+  .checkout__header {
     flex-direction: column;
    height: 130px; 
     padding: 15px;

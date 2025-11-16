@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-br">
 	<head>
@@ -5,9 +6,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Cart</title>
 
-		<style>
-      @import url("https://fonts.googleapis.com/css2?family=Funnel+Sans:ital,wght@0,300..800;1,300..800&display=swap");
-    </style>
+		<link href="https://fonts.googleapis.com/css2?family=Funnel+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
 
 		<link rel="stylesheet" href="css/reset.css" />
 
@@ -15,225 +14,233 @@
 			rel="stylesheet"
 			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" />
 
-		<link rel="stylesheet" href="css/cart.css">
+	
 		<link rel="stylesheet" href="css/variables.css" />
 		<link rel="stylesheet" href="css/base.css" />
-		<link rel="stylesheet" href="css/layout.css" />
 		<link rel="stylesheet" href="css/components/buttons.css" />
 		<link rel="stylesheet" href="css/components/header.css" />
 		<link rel="stylesheet" href="css/components/nav.css" />
-		<link rel="stylesheet" href="css/index.css" />
+		<link rel="stylesheet" href="css/components/footer.css" />
+		<link rel="stylesheet" href="css/cart.css">
 
 		<link rel="icon" href="img/page_icon.ico" type="image/x-icon" />
 	</head>
-	<body style="
-	padding-bottom: 50px;
-	 /* align-items: center; */
-	">
-		<header class="header">
-			<div class="header__left">
-				<img class="logo" src="img/logo.png" alt />
-			</div>
+	<body>
+		     <header class="header">
+      <div class="header__left">
+        <img class="logo" src="img/logo.png" alt="" />
+      </div>
 
-			<div class="header__center">
-				<form class="search-form">
-					<input type="text" placeholder="Buscar na DrogaFast" />
-					<button>
-						<svg
-							xmlns="http://www.w3.org/2000/svg"
-							width="20"
-							height="20"
-							viewBox="0 0 24 24"
-							fill="none"
-							stroke="currentColor"
-							stroke-width="2"
-							stroke-linecap="round"
-							stroke-linejoin="round">
-							<circle cx="11" cy="11" r="8"></circle>
-							<line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-						</svg>
-					</button>
-				</form>
-			</div>
-			<div class="header__right">
-				<button class="header__right__btn-login">
-					<svg
-						class="header__right__icons"
-						viewBox="0 0 24 24"
-						fill="none"
-						xmlns="http://www.w3.org/2000/svg"
-						transform="matrix(1, 0, 0, 1, 0, 0)">
-						<g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-						<g
-							id="SVGRepo_tracerCarrier"
-							stroke-linecap="round"
-							stroke-linejoin="round"></g>
-						<g id="SVGRepo_iconCarrier">
-							<path
-								d="M16 7C16 9.20914 14.2091 11 12 11C9.79086 11 8 9.20914 8 7C8 4.79086 9.79086 3 12 3C14.2091 3 16 4.79086 16 7Z"
-								stroke="#00D0FD"
-								stroke-width="2"
-								stroke-linecap="round"
-								stroke-linejoin="round"></path>
-							<path
-								d="M12 14C8.13401 14 5 17.134 5 21H19C19 17.134 15.866 14 12 14Z"
-								stroke="#00D0FD"
-								stroke-width="2"
-								stroke-linecap="round"
-								stroke-linejoin="round"></path>
-						</g>
-					</svg>
-					<div class="header__right__lbl">
-						<p class="header__right__lbl__p__top">Boas-vindas!</p>
-						<p class="header__right__p__bottom">Entrar ou cadastrar</p>
-					</div>
-				</button>
+      <div class="header__center">
+        <form class="search-form">
+          <input type="text" placeholder="Buscar na DrogaFast" />
+          <button>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+          </button>
+        </form>
+      </div>
+      <div class="header__right">
+        <button class="header__right__btn-login" onclick="window.location.href='login.html'" >
+          <svg
+            class="header__right__icons"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            transform="matrix(1, 0, 0, 1, 0, 0)"
+          >
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g
+              id="SVGRepo_tracerCarrier"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></g>
+            <g id="SVGRepo_iconCarrier">
+              <path
+                d="M16 7C16 9.20914 14.2091 11 12 11C9.79086 11 8 9.20914 8 7C8 4.79086 9.79086 3 12 3C14.2091 3 16 4.79086 16 7Z"
+                stroke="#00D0FD"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+              <path
+                d="M12 14C8.13401 14 5 17.134 5 21H19C19 17.134 15.866 14 12 14Z"
+                stroke="#00D0FD"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+            </g>
+          </svg>
+          <div class="header__right__lbl">
+            <p class="header__right__lbl__p__top">Boas-vindas!</p>
+            <p class="header__right__p__bottom">Entrar ou cadastrar</p>
+          </div>
+        </button>
 
-				<button class="header__right__btn-orders">
-					<svg
-						class="header__right__icons"
-						fill="#00D0FD"
-						viewBox="0 0 256 256"
-						id="Flat"
-						xmlns="http://www.w3.org/2000/svg"
-						stroke="#00D0FD"
-						stroke-width="8.959999999999999">
-						<g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-						<g
-							id="SVGRepo_tracerCarrier"
-							stroke-linecap="round"
-							stroke-linejoin="round"
-							stroke="#CCCCCC"
-							stroke-width="13.312000000000001"></g>
-						<g id="SVGRepo_iconCarrier">
-							<path
-								d="M226.40478,72.71875c-.012-.02246-.01758-.0459-.03-.06836l-.01342-.01855a11.98985,11.98985,0,0,0-4.47876-4.41211l-88-49.5a12.06937,12.06937,0,0,0-11.76563,0l-88,49.5a11.99943,11.99943,0,0,0-4.48492,4.4248c-.00531.00977-.01276.0166-.018.02637-.01343.02392-.01916.0498-.032.07373a11.98451,11.98451,0,0,0-1.58222,5.93408v98.64258a12.01654,12.01654,0,0,0,6.11719,10.459l88,49.5a11.97648,11.97648,0,0,0,5.61182,1.51368c.08325.00585.16211.02636.24658.02734h.03613c.10059,0,.19507-.022.29395-.0293a11.97814,11.97814,0,0,0,5.57715-1.51172l88-49.5a12.01422,12.01422,0,0,0,6.11718-10.459V78.67871A11.98628,11.98628,0,0,0,226.40478,72.71875Zm-100.366-47.02637a4.02315,4.02315,0,0,1,3.92187,0l85.91113,48.3252L177.1521,96.01465,88.22,46.96582Zm2.89062,97.71826L40.18921,73.98291,80.019,51.57861l88.97339,49.07178Zm-90.89062,57.397a4.00512,4.00512,0,0,1-2.03907-3.48633V80.80615l88.92835,49.53272-.86853,98.85547Zm179.92187,0-85.8999,48.31884.86792-98.7871,40.0935-22.77784v44.94922a4,4,0,0,0,8,0V103.0166l38.97754-22.14355v96.44824A4.00455,4.00455,0,0,1,217.96069,180.80762Z"></path>
-						</g>
-					</svg>
-					<div class="header__right__lbl">
-						<p class="header__right__lbl__p__top">Acompanhar</p>
-						<p class="header__right__p__bottom">pedidos</p>
-					</div>
-				</button>
+        <button class="header__right__btn-orders">
+          <svg
+            class="header__right__icons"
+            fill="#00D0FD"
+            viewBox="0 0 256 256"
+            id="Flat"
+            xmlns="http://www.w3.org/2000/svg"
+            stroke="#00D0FD"
+            stroke-width="8.959999999999999"
+          >
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g
+              id="SVGRepo_tracerCarrier"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke="#CCCCCC"
+              stroke-width="13.312000000000001"
+            ></g>
+            <g id="SVGRepo_iconCarrier">
+              <path
+                d="M226.40478,72.71875c-.012-.02246-.01758-.0459-.03-.06836l-.01342-.01855a11.98985,11.98985,0,0,0-4.47876-4.41211l-88-49.5a12.06937,12.06937,0,0,0-11.76563,0l-88,49.5a11.99943,11.99943,0,0,0-4.48492,4.4248c-.00531.00977-.01276.0166-.018.02637-.01343.02392-.01916.0498-.032.07373a11.98451,11.98451,0,0,0-1.58222,5.93408v98.64258a12.01654,12.01654,0,0,0,6.11719,10.459l88,49.5a11.97648,11.97648,0,0,0,5.61182,1.51368c.08325.00585.16211.02636.24658.02734h.03613c.10059,0,.19507-.022.29395-.0293a11.97814,11.97814,0,0,0,5.57715-1.51172l88-49.5a12.01422,12.01422,0,0,0,6.11718-10.459V78.67871A11.98628,11.98628,0,0,0,226.40478,72.71875Zm-100.366-47.02637a4.02315,4.02315,0,0,1,3.92187,0l85.91113,48.3252L177.1521,96.01465,88.22,46.96582Zm2.89062,97.71826L40.18921,73.98291,80.019,51.57861l88.97339,49.07178Zm-90.89062,57.397a4.00512,4.00512,0,0,1-2.03907-3.48633V80.80615l88.92835,49.53272-.86853,98.85547Zm179.92187,0-85.8999,48.31884.86792-98.7871,40.0935-22.77784v44.94922a4,4,0,0,0,8,0V103.0166l38.97754-22.14355v96.44824A4.00455,4.00455,0,0,1,217.96069,180.80762Z"
+              ></path>
+            </g>
+          </svg>
+          <div class="header__right__lbl">
+            <p class="header__right__lbl__p__top">Acompanhar</p>
+            <p class="header__right__p__bottom">pedidos</p>
+          </div>
+        </button>
 
-				<button class="header__right__btn-cart">
-					<svg
-						class="header__right__icons"
-						viewBox="0 0 24 24"
-						fill="none"
-						xmlns="http://www.w3.org/2000/svg">
-						<g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-						<g
-							id="SVGRepo_tracerCarrier"
-							stroke-linecap="round"
-							stroke-linejoin="round"></g>
-						<g id="SVGRepo_iconCarrier">
-							<path
-								d="M6.29977 5H21L19 12H7.37671M20 16H8L6 3H3M9 20C9 20.5523 8.55228 21 8 21C7.44772 21 7 20.5523 7 20C7 19.4477 7.44772 19 8 19C8.55228 19 9 19.4477 9 20ZM20 20C20 20.5523 19.5523 21 19 21C18.4477 21 18 20.5523 18 20C18 19.4477 18.4477 19 19 19C19.5523 19 20 19.4477 20 20Z"
-								stroke="currentColor"
-								stroke-width="1.7"
-								stroke-linecap="round"
-								stroke-linejoin="round"></path>
-						</g>
-					</svg>
-					<div class="header__right__lbl">
-						<p class="header__right__lbl__p__top">Carrinho</p>
-						<p class="header__right__p__bottom">R$ 0,00</p>
-					</div>
-				</button>
-			</div>
-		</header>
+        <button class="header__right__btn-cart">
+          <svg
+            class="header__right__icons"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g
+              id="SVGRepo_tracerCarrier"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></g>
+            <g id="SVGRepo_iconCarrier">
+              <path
+                d="M6.29977 5H21L19 12H7.37671M20 16H8L6 3H3M9 20C9 20.5523 8.55228 21 8 21C7.44772 21 7 20.5523 7 20C7 19.4477 7.44772 19 8 19C8.55228 19 9 19.4477 9 20ZM20 20C20 20.5523 19.5523 21 19 21C18.4477 21 18 20.5523 18 20C18 19.4477 18.4477 19 19 19C19.5523 19 20 19.4477 20 20Z"
+                stroke="currentColor"
+                stroke-width="1.7"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+            </g>
+          </svg>
+          <div class="header__right__lbl">
+            <p class="header__right__lbl__p__top">Carrinho</p>
+            <p class="header__right__p__bottom">R$ 0,00</p>
+          </div>
+        </button>
+      </div>
+    </header>
 
-		<nav class="nav">
-			<div class="nav__left">
-				<button class="nav__right__btn-cep" id="cepButton">
-					<svg
-						class="nav__right__btn-cep__icon"
-						fill="#000000"
-						viewBox="0 0 32 32"
-						version="1.1"
-						xmlns="http://www.w3.org/2000/svg">
-						<g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-						<g
-							id="SVGRepo_tracerCarrier"
-							stroke-linecap="round"
-							stroke-linejoin="round"></g>
-						<g id="SVGRepo_iconCarrier">
-							<path
-								d="M16.114-0.011c-6.559 0-12.114 5.587-12.114 12.204 0 6.93 6.439 14.017 10.77 18.998 0.017 0.020 0.717 0.797 1.579 0.797h0.076c0.863 0 1.558-0.777 1.575-0.797 4.064-4.672 10-12.377 10-18.998 0-6.618-4.333-12.204-11.886-12.204zM16.515 29.849c-0.035 0.035-0.086 0.074-0.131 0.107-0.046-0.032-0.096-0.072-0.133-0.107l-0.523-0.602c-4.106-4.71-9.729-11.161-9.729-17.055 0-5.532 4.632-10.205 10.114-10.205 6.829 0 9.886 5.125 9.886 10.205 0 4.474-3.192 10.416-9.485 17.657zM16.035 6.044c-3.313 0-6 2.686-6 6s2.687 6 6 6 6-2.687 6-6-2.686-6-6-6zM16.035 16.044c-2.206 0-4.046-1.838-4.046-4.044s1.794-4 4-4c2.207 0 4 1.794 4 4 0.001 2.206-1.747 4.044-3.954 4.044z"></path>
-						</g>
-					</svg>
+    <nav class="nav">
+        <button class="nav__btn-cep" id="cepButton">
+          <svg
+            class="nav__btn-cep__icon"
+            fill="#000000"
+            viewBox="0 0 32 32"
+            version="1.1"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g
+              id="SVGRepo_tracerCarrier"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></g>
+            <g id="SVGRepo_iconCarrier">
+              <path
+                d="M16.114-0.011c-6.559 0-12.114 5.587-12.114 12.204 0 6.93 6.439 14.017 10.77 18.998 0.017 0.020 0.717 0.797 1.579 0.797h0.076c0.863 0 1.558-0.777 1.575-0.797 4.064-4.672 10-12.377 10-18.998 0-6.618-4.333-12.204-11.886-12.204zM16.515 29.849c-0.035 0.035-0.086 0.074-0.131 0.107-0.046-0.032-0.096-0.072-0.133-0.107l-0.523-0.602c-4.106-4.71-9.729-11.161-9.729-17.055 0-5.532 4.632-10.205 10.114-10.205 6.829 0 9.886 5.125 9.886 10.205 0 4.474-3.192 10.416-9.485 17.657zM16.035 6.044c-3.313 0-6 2.686-6 6s2.687 6 6 6 6-2.687 6-6-2.686-6-6-6zM16.035 16.044c-2.206 0-4.046-1.838-4.046-4.044s1.794-4 4-4c2.207 0 4 1.794 4 4 0.001 2.206-1.747 4.044-3.954 4.044z"
+              ></path>
+            </g>
+          </svg>
 
-					<div class="nav__right__btn-cep__main-lbl">
-						<div class="lbl_address">
-							<p>Insira seu CEP</p>
-						</div>
-						<div class="lbl_cep">
-							<p></p>
-						</div>
-					</div>
-				</button>
-				<button class="but_all_cat">
-					<svg
-						class="icon_menu"
-						viewBox="0 0 24 24"
-						fill="none"
-						xmlns="http://www.w3.org/2000/svg">
-						<g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-						<g
-							id="SVGRepo_tracerCarrier"
-							stroke-linecap="round"
-							stroke-linejoin="round"></g>
-						<g id="SVGRepo_iconCarrier">
-							<path
-								d="M4 6H20M4 12H20M4 18H20"
-								stroke="#000000"
-								stroke-width="2"
-								stroke-linecap="round"
-								stroke-linejoin="round"></path>
-						</g>
-					</svg>
+          <div class="nav__btn-cep__main-lbl">
+            <div class="lbl_address">
+              <p>Insira seu CEP</p>
+            </div>
+            <div class="lbl_cep">
+              <p></p>
+            </div>
+          </div>
+        </button>
+        <button class="but_all_cat nav__btn">
+          <svg
+            class="icon_menu"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g
+              id="SVGRepo_tracerCarrier"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></g>
+            <g id="SVGRepo_iconCarrier">
+              <path
+                d="M4 6H20M4 12H20M4 18H20"
+                stroke="#000000"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+            </g>
+          </svg>
 
-					<p>Todas as Categorias</p>
-				</button>
-				<button class="but_farm">
-					<p>Farmácias</p>
-				</button>
-				<button class="but_blog">
-					<p>Blog</p>
-				</button>
-				<button class="but_serv">
-					<p>Serviços de saúde</p>
-				</button>
-				<button class="but_desc_ben">
-					<p>Descontos e Benefícios</p>
-				</button>
-				<button class="but_loj">
-					<p>Lojas Parceiras</p>
-				</button>
-				<button class="but_baixe">
-					<p>Baixe o app</p>
-				</button>
-			</div>
-			<div class="nav__right">
-				<button class="btn">
-					<p>Exibir descontos Fast</p>
-				</button>
-			</div>
-		</nav>
+          <p>Todas as Categorias</p>
+        </button>
+        <button class="but_farm">
+          <p>Farmácias</p>
+        </button>
+        <button class="but_blog">
+          <p>Blog</p>
+        </button>
+        <button class="but_serv">
+          <p>Serviços de saúde</p>
+        </button>
+        <button class="but_desc_ben">
+          <p>Descontos e Benefícios</p>
+        </button>
+        <button class="but_loj">
+          <p>Lojas Parceiras</p>
+        </button>
+        <button class="but_baixe">
+          <p>Baixe o app</p>
+        </button>
+        <button class="btn">
+          <p>Exibir descontos Fast</p>
+        </button>
+    </nav>
+		<!-- final header -->
 
-		<div class="main_content"
-			style="
-		/* justify-content: center;
-		max-width: 1500px; */
-		">
-			<section class="cart-section">
-				<div class="content-cart">
+
+		<main class="cart">
+			<section class="cart__section">
+				<div class="cart__content">
 					<!-- PRODUCT DETAILS -->
-					<div class="left-side">
-						<div class="product-box">
+					<div class="cart__col cart__col--left">
+						<div class="cart__product-box">
 							<div>
-								<h1 class="h1_products">
+								<h1 class="cart__title h1_products">
 									Carrinho de compras
 								</h1>
 								<h3 class="title-medium">
@@ -243,12 +250,11 @@
 									Entregue e vendido por <strong>DrogaFast</strong>
 								</p>
 							</div>
-							<div class="cart-product">
+							<div class="cart__product-item">
 								<div>
-									<img src="img/card_prod_1.png"
-										class="img-product" alt>
+									<img src="img/card_prod_1.png" class="cart__product-img" alt="Fralda Pampers — 50 unidades" loading="lazy">
 								</div>
-								<div class="item-details">
+								<div class="cart__item-details">
 									<p><span class="clickable-text">Fralda Pampers</span></p>
 									<p class="light-text-start">
 										Pampers
@@ -265,12 +271,10 @@
 
 								<!-- BUTTON SELECTOR -->
 								<!-- without javascript -->
-								<div class="quantity-selector">
-									<button class="minus-btn"
-										aria-label="Decrease quantity">&minus;</button>
-									<input type="number" class="quantity-input" value="1" min="1" max="10"
-										aria-live="polite">
-									<button class="plus-btn" aria-label="Increase quantity">&plus;</button>
+								<div class="cart__quantity">
+									<button class="cart__quantity-btn cart__quantity-btn--minus" aria-label="Decrease quantity">−</button>
+									<input type="number" class="cart__quantity-input" value="1" min="1" max="10" aria-live="polite">
+									<button class="cart__quantity-btn cart__quantity-btn--plus" aria-label="Increase quantity">+</button>
 								</div>
 								<div>
 									<h3 class="title-medium no-margin">
@@ -283,8 +287,8 @@
 
 						</div>
 
-						<div class="entrega-flex">
-							<div class="info-retirada">
+						<div class="cart__delivery">
+							<div class="cart__pickup-info">
 								<p>
 									Retirar na farmácia
 								</p>
@@ -293,8 +297,8 @@
 								</p>
 
 							</div>
-							<div class="info-entrega-flex">
-								<div class="info-entrega">
+							<div class="cart__delivery-info-flex">
+								<div class="cart__delivery-info">
 									<p>
 										Receber no endereço
 									</p>
@@ -315,11 +319,11 @@
 								<div>
 
 								</div>
-								<div class="flex-valor">
-									<div class="entrega-valor">
+								<div class="cart__delivery-values">
+									<div class="cart__delivery-value">
 										<h3 class="title-medium-value title-medium">R$ 7,90</h3>
 									</div>
-									<div class="entrega-valor">
+									<div class="cart__delivery-value">
 										<h3 class="title-medium-value title-medium">R$ 5,90</h3>
 									</div>
 								</div>
@@ -329,14 +333,14 @@
 					</div>
 
 					<!-- RESUME -->
-					<div class="right-side">
-						<div class="resume">
+					<div class="cart__col--right">
+						<div class="cart__summary">
 							<div>
 								<h3 class="title-medium">
 									Resumo do pedido
 								</h3>
 							</div>
-							<div class="product-value">
+							<div class="cart__value">
 								<p class="light-text">
 									Subtotal (1)
 								</p>
@@ -347,7 +351,7 @@
 							<div>
 
 							</div>
-							<div class="product-value2">
+							<div class="cart__total">
 								<p class="light-text start-text">
 									Total
 								</p>
@@ -360,22 +364,22 @@
 								1x s/ juros de R$ 129,09
 							</p>
 							<div class="card-body">
-								<a href="checkout.html" class="but-prosseguir">
+								<a href="checkout.html" class="cart__btn cart__btn--proceed">
 									Prosseguir
 								</a>
-								<a href="index.html" class="but-continuar-comprando ">
+								<a href="index.html" class="cart__btn cart__btn--continue">
 									Continuar comprando
 								</a>
 							</div>
 
 						</div>
-						<div class="cep-background">
-							<div class="info-cep">
-								<div class="local-icon">
-									<img src="img/location.png" alt class="location-icon">
+						<div class="cart__cep">
+							<div class="cart__cep-info">
+								<div class="cart__local-icon">
+									<img src="img/location.png" alt="Ícone de localização" class="cart__local-icon-img">
 								</div>
 
-								<div class="cep-content">
+								<div class="cart__cep-content">
 									<div>
 										<p class="light-text-start">
 											Entregando em:
@@ -409,9 +413,9 @@
 					<h1 class="h1_products">Produtos selecionados para você</h1>
 				</div>
 
-				<div class="products">
-					<div class="card" style="width: 18rem">
-						<img src="img/card_prod_1.png" class="card-img-top" alt="..." />
+										<div class="products">
+					<div class="card">
+						<img src="img/card_prod_1.png" class="card-img-top" alt="Fralda Pampers Pants Premium Care XG — 64 unidades" loading="lazy" />
 						<div class="card-body">
 							<h5 class="card-title">
 								Fralda Pampers Pants Premium Care XG 64 unidades
@@ -420,8 +424,8 @@
 						</div>
 					</div>
 
-					<div class="card" style="width: 18rem">
-						<img src="img/card_prod_1.png" class="card-img-top" alt="..." />
+					<div class="card">
+						<img src="img/card_prod_1.png" class="card-img-top" alt="Fralda Pampers Pants Premium Care XG — 64 unidades" loading="lazy" />
 						<div class="card-body">
 							<h5 class="card-title">
 								Fralda Pampers Pants Premium Care XG 64 unidades
@@ -430,8 +434,8 @@
 						</div>
 					</div>
 
-					<div class="card" style="width: 18rem">
-						<img src="img/card_prod_1.png" class="card-img-top" alt="..." />
+					<div class="card">
+						<img src="img/card_prod_1.png" class="card-img-top" alt="Fralda Pampers Pants Premium Care XG — 64 unidades" loading="lazy" />
 						<div class="card-body">
 							<h5 class="card-title">
 								Fralda Pampers Pants Premium Care XG 64 unidades
@@ -440,8 +444,8 @@
 						</div>
 					</div>
 
-					<div class="card" style="width: 18rem">
-						<img src="img/card_prod_1.png" class="card-img-top" alt="..." />
+					<div class="card">
+						<img src="img/card_prod_1.png" class="card-img-top" alt="Fralda Pampers Pants Premium Care XG — 64 unidades" loading="lazy" />
 						<div class="card-body">
 							<h5 class="card-title">
 								Fralda Pampers Pants Premium Care XG 64 unidades
@@ -450,8 +454,8 @@
 						</div>
 					</div>
 
-					<div class="card" style="width: 18rem">
-						<img src="img/card_prod_1.png" class="card-img-top" alt="..." />
+					<div class="card">
+						<img src="img/card_prod_1.png" class="card-img-top" alt="Fralda Pampers Pants Premium Care XG — 64 unidades" loading="lazy" />
 						<div class="card-body">
 							<h5 class="card-title">
 								Fralda Pampers Pants Premium Care XG 64 unidades
@@ -460,8 +464,8 @@
 						</div>
 					</div>
 
-					<div class="card" style="width: 18rem">
-						<img src="img/card_prod_1.png" class="card-img-top" alt="..." />
+					<div class="card">
+						<img src="img/card_prod_1.png" class="card-img-top" alt="Fralda Pampers Pants Premium Care XG — 64 unidades" loading="lazy" />
 						<div class="card-body">
 							<h5 class="card-title">
 								Fralda Pampers Pants Premium Care XG 64 unidades
@@ -478,8 +482,8 @@
 				</div>
 
 				<div class="products">
-					<div class="card" style="width: 18rem">
-						<img src="img/card_prod_1.png" class="card-img-top" alt="..." />
+					<div class="card">
+						<img src="img/card_prod_1.png" class="card-img-top" alt="Fralda Pampers Pants Premium Care XG — 64 unidades" loading="lazy" />
 						<div class="card-body">
 							<h5 class="card-title">
 								Fralda Pampers Pants Premium Care XG 64 unidades
@@ -488,8 +492,8 @@
 						</div>
 					</div>
 
-					<div class="card" style="width: 18rem">
-						<img src="img/card_prod_1.png" class="card-img-top" alt="..." />
+					<div class="card">
+						<img src="img/card_prod_1.png" class="card-img-top" alt="Fralda Pampers Pants Premium Care XG — 64 unidades" loading="lazy" />
 						<div class="card-body">
 							<h5 class="card-title">
 								Fralda Pampers Pants Premium Care XG 64 unidades
@@ -498,8 +502,8 @@
 						</div>
 					</div>
 
-					<div class="card" style="width: 18rem">
-						<img src="img/card_prod_1.png" class="card-img-top" alt="..." />
+					<div class="card">
+						<img src="img/card_prod_1.png" class="card-img-top" alt="Fralda Pampers Pants Premium Care XG — 64 unidades" loading="lazy" />
 						<div class="card-body">
 							<h5 class="card-title">
 								Fralda Pampers Pants Premium Care XG 64 unidades
@@ -508,8 +512,8 @@
 						</div>
 					</div>
 
-					<div class="card" style="width: 18rem">
-						<img src="img/card_prod_1.png" class="card-img-top" alt="..." />
+					<div class="card">
+						<img src="img/card_prod_1.png" class="card-img-top" alt="Fralda Pampers Pants Premium Care XG — 64 unidades" loading="lazy" />
 						<div class="card-body">
 							<h5 class="card-title">
 								Fralda Pampers Pants Premium Care XG 64 unidades
@@ -518,8 +522,8 @@
 						</div>
 					</div>
 
-					<div class="card" style="width: 18rem">
-						<img src="img/card_prod_1.png" class="card-img-top" alt="..." />
+					<div class="card">
+						<img src="img/card_prod_1.png" class="card-img-top" alt="Fralda Pampers Pants Premium Care XG — 64 unidades" loading="lazy" />
 						<div class="card-body">
 							<h5 class="card-title">
 								Fralda Pampers Pants Premium Care XG 64 unidades
@@ -528,8 +532,8 @@
 						</div>
 					</div>
 
-					<div class="card" style="width: 18rem">
-						<img src="img/card_prod_1.png" class="card-img-top" alt="..." />
+					<div class="card">
+						<img src="img/card_prod_1.png" class="card-img-top" alt="Fralda Pampers Pants Premium Care XG — 64 unidades" loading="lazy" />
 						<div class="card-body">
 							<h5 class="card-title">
 								Fralda Pampers Pants Premium Care XG 64 unidades
@@ -541,26 +545,26 @@
 
 			</section>
 
-			<footer style="class: absolute">
-				<button class="card_foo">
-					<img class="lg_card_foo" src="img/headset.svg" alt />
+			<footer>
+				<button type="button" class="card_foo" aria-label="Central de Atendimento">
+					<img class="lg_card_foo" src="img/headset.svg" alt="Central de Atendimento" loading="lazy" />
 					Central de Atendimento
 				</button>
-				<button class="card_foo">
-					<img class="lg_card_foo" src="img/download_our_app.svg" alt />
+				<button type="button" class="card_foo" aria-label="Baixe nosso app">
+					<img class="lg_card_foo" src="img/download_our_app.svg" alt="Baixe nosso app" loading="lazy" />
 					Baixe nosso app
 				</button>
 			</footer>
 
-		</div>
+		</main>
 
-		<div class="resume-mobile">
+			<div class="cart__summary--mobile">
 			<div>
 				<h3 class="title-medium">
 					Resumo do pedido
 				</h3>
 			</div>
-			<div class="product-value">
+				<div class="cart__value">
 				<p class="light-text">
 					Subtotal (1)
 				</p>
@@ -571,7 +575,7 @@
 			<div>
 
 			</div>
-			<div class="product-value2">
+				<div class="cart__total">
 				<p class="light-text start-text">
 					Total
 				</p>
@@ -584,14 +588,14 @@
 			<p class="light-text">
 				1x s/ juros de R$ 129,09
 			</p>
-			<div class="card-body-mobile">
-				<a href="checkout.html" class="but-prosseguir but-prosseguir-mobile">
-									Prosseguir
-								</a>
-				<a href="index.html" class="but-continuar-comprando but-continuar-comprando-mobile">
-									Continuar comprando
-								</a>
-			</div>
+				<div class="card-body-mobile">
+					<a href="checkout.html" class="cart__btn cart__btn--proceed cart__btn--mobile">
+						Prosseguir
+					</a>
+					<a href="index.html" class="cart__btn cart__btn--continue cart__btn--mobile">
+						Continuar comprando
+					</a>
+				</div>
 		</div>
 
 		<script
