@@ -51,6 +51,11 @@
 	margin-bottom: 30px;
 }
 
+.products{
+	display: flex;
+	justify-content: space-between;
+}
+
 .card-title {
 	font-size: 16px;
 	display: -webkit-box;
