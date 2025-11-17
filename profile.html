@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meu Perfil - DrogaFast</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Funnel+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/variables.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/components/buttons.css" />
+    <link rel="stylesheet" href="css/components/header.css" />
+    <link rel="stylesheet" href="css/components/nav.css" />
+    <link rel="stylesheet" href="css/components/footer.css" />
+
+    <link rel="stylesheet" href="css/profile.css" />
+
+    <link rel="icon" href="img/page_icon.ico" type="image/x-icon" />
+  </head>
+
+  <body>
+    <!-- HEADER PADRÃO DO SITE -->
+    <header class="header">
+      <div class="header__left">
+        <img class="logo" src="img/logo.png" alt="DrogaFast" />
+      </div>
+
+      <div class="header__center">
+        <form class="search-form">
+          <input type="text" placeholder="Buscar na DrogaFast" />
+          <button>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+              viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+          </button>
+        </form>
+      </div>
+
+      <div class="header__right">
+        <button class="header__right__btn-login">
+          <svg class="header__right__icons" viewBox="0 0 24 24" fill="none">
+            <path d="M16 7C16 9.20914 14.2091 11 12 11C9.79086 11 8 9.20914 8 7C8 4.79086 9.79086 3 12 3C14.2091 3 16 4.79086 16 7Z"
+              stroke="#00D0FD" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" />
+            <path d="M12 14C8.13401 14 5 17.134 5 21H19C19 17.134 15.866 14 12 14Z"
+              stroke="#00D0FD" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
+
+          <div class="header__right__lbl">
+            <p class="header__right__lbl__p__top">Olá!</p>
+            <p class="header__right__p__bottom">Minha conta</p>
+          </div>
+        </button>
+
+        <button class="header__right__btn-orders">
+          <svg class="header__right__icons" fill="#00D0FD" viewBox="0 0 256 256">
+            <path d="M226.40478,72.71875..."></path>
+          </svg>
+          <div class="header__right__lbl">
+            <p class="header__right__lbl__p__top">Meus</p>
+            <p class="header__right__p__bottom">pedidos</p>
+          </div>
+        </button>
+
+        <button class="header__right__btn-cart">
+          <svg class="header__right__icons" viewBox="0 0 24 24" fill="none">
+            <path d="M6.29977 5H21L19 12H7.37671..."></path>
+          </svg>
+          <div class="header__right__lbl">
+            <p class="header__right__lbl__p__top">Carrinho</p>
+            <p class="header__right__p__bottom">R$ 0,00</p>
+          </div>
+        </button>
+      </div>
+    </header>
+
+    <!-- NAV PADRÃO -->
+    <nav class="nav">
+      <button class="nav__btn-cep" id="cepButton">
+        <svg class="nav__btn-cep__icon" fill="#000000"
+          viewBox="0 0 32 32">
+          <path d="M16.114-0.011c-6.559 0-12.114..."></path>
+        </svg>
+
+        <div class="nav__btn-cep__main-lbl">
+          <div class="lbl_address"><p>Insira seu CEP</p></div>
+          <div class="lbl_cep"><p></p></div>
+        </div>
+      </button>
+
+      <button class="but_all_cat nav__btn">
+        <svg class="icon_menu" viewBox="0 0 24 24">
+          <path d="M4 6H20M4 12H20M4 18H20"></path>
+        </svg>
+        <p>Todas as Categorias</p>
+      </button>
+
+      <button class="but_farm"><p>Farmácias</p></button>
+      <button class="but_blog"><p>Blog</p></button>
+      <button class="but_serv"><p>Serviços de saúde</p></button>
+      <button class="but_desc_ben"><p>Descontos e Benefícios</p></button>
+      <button class="but_loj"><p>Lojas Parceiras</p></button>
+      <button class="but_baixe"><p>Baixe o app</p></button>
+      <button class="btn"><p>Exibir descontos Fast</p></button>
+    </nav>
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main class="profile">
+      <div class="container">
+
+        <!-- TÍTULO -->
+        <h1 class="h1_products" style="margin-top: 30px;">Meu Perfil</h1>
+
+        <!-- SEÇÃO 1: DADOS DO USUÁRIO -->
+        <section class="profile__section">
+          <h2 class="title-medium">Dados pessoais</h2>
+
+          <div class="profile__box">
+            <p><strong>Nome:</strong> João da Silva</p>
+            <p><strong>Email:</strong> joaosilva@example.com</p>
+            <p><strong>Telefone:</strong> (61) 99999-0000</p>
+
+            <button class="cart__btn cart__btn--continue">Editar dados</button>
+          </div>
+        </section>
+
+        <!-- SEÇÃO 2: ENDEREÇOS -->
+        <section class="profile__section">
+          <h2 class="title-medium">Endereços</h2>
+
+          <div class="profile__box">
+            <p><strong>Principal:</strong></p>
+            <p>QS 07, Lote 01 – Taguatinga, Brasília – DF</p>
+
+            <button class="cart__btn cart__btn--continue">Gerenciar endereços</button>
+          </div>
+        </section>
+
+        <!-- SEÇÃO 3: ÚLTIMOS PEDIDOS -->
+        <section class="profile__section">
+          <h2 class="title-medium">Últimos pedidos</h2>
+          <div class="profile__box">
+            <p><strong>Pedido #DF-22991</strong></p>
+            <p>Status: Entregue</p>
+            <p><strong>Total:</strong> R$ 89,90</p>
+
+            <button class="cart__btn cart__btn--continue">Ver detalhes</button>
+          </div>
+        </section>
+
+        <!-- SEÇÃO 4: PAGAMENTO -->
+        <section class="profile__section">
+          <h2 class="title-medium">Formas de pagamento</h2>
+
+          <div class="profile__box">
+            <p><strong>Cartão principal:</strong></p>
+            <p>Mastercard final 1291</p>
+
+            <button class="cart__btn cart__btn--continue">Gerenciar cartões</button>
+          </div>
+        </section>
+
+        <!-- SEÇÃO 5: FAVORITOS -->
+        <section class="profile__section">
+          <h2 class="h1_products">Favoritos</h2>
+
+          <div class="products">
+
+            <div class="card" style="width: 18rem">
+              <img src="img/card_prod_1.png" class="card-img-top" alt=""/>
+              <div class="card-body">
+                <h5 class="card-title">
+                  Fralda Pampers Pants Premium Care XG 64 unidades
+                </h5>
+                <p class="card-value">R$ 129,90</p>
+              </div>
+            </div>
+
+            <div class="card" style="width: 18rem">
+              <img src="img/card_prod_1.png" class="card-img-top" alt=""/>
+              <div class="card-body">
+                <h5 class="card-title">
+                  Vitamina C 1000mg com 60 cápsulas
+                </h5>
+                <p class="card-value">R$ 59,90</p>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- LOGOUT -->
+        <section class="profile__section">
+          <button class="cart__btn cart__btn--proceed" style="background-color:#ff4d4d; border: none;">
+            Sair da conta
+          </button>
+        </section>
+
+      </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <p>© 2025 DrogaFast — Todos os direitos reservados.</p>
+    </footer>
+
+  </body>
+</html>
