@@ -23,4 +23,15 @@
   /* === ✍️ Tipografia === */
   --font-base: 'Funnel Sans', sans-serif;
   --font-size-base: 14px;
+
+
+
+
+/* IA */
+  /* título/brand pode usar a mesma família ou outra variável caso queira alterar separadamente */
+  --font-title: var(--font-base);
+
+  /* cores de texto padronizadas para garantir consistência entre páginas */
+  --text-primary: #1a1a1a;
+  --text-secondary: #6b6b6b;
 }

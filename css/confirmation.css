@@ -1,13 +1,227 @@
-.main-content{
-  width: 90%;
+/* ==============================
+   CONFIRMATION PAGE
+   Página de confirmação de compra
+============================== */
+
+.confirmation__container {
+  display: flex;
+  align-items: center;
   justify-content: center;
-  height: auto;
-  background-color: lightblue;
-  margin-top: 50px;
-  border-radius: 10px;
-  padding: 20px;
-  border: 2px solid black;
+  min-height: calc(100vh - 200px);
+  padding: 40px 20px;
 }
-.pedido-title{
+
+.confirmation__box {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  padding: 60px 40px;
+  max-width: 500px;
+  width: 100%;
   text-align: center;
+}
+
+.confirmation__icon {
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.confirmation__icon svg {
+  width: 80px;
+  height: 80px;
+  animation: checkmark-scale 0.6s ease-out;
+}
+
+@keyframes checkmark-scale {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.confirmation__title {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 12px;
+  line-height: 1.2;
+}
+
+.confirmation__subtitle {
+  font-size: 16px;
+  color: var(--text-secondary);
+  margin-bottom: 40px;
+  line-height: 1.5;
+}
+
+.confirmation__details {
+  background: var(--color-light);
+  border-radius: 8px;
+  padding: 30px;
+  margin-bottom: 30px;
+  text-align: left;
+}
+
+.confirmation__detail-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.confirmation__detail-item:last-child {
+  border-bottom: none;
+}
+
+.confirmation__label {
+  font-size: 14px;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.confirmation__value {
+  font-size: 16px;
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.confirmation__value--highlight {
+  color: var(--color-primary);
+  font-size: 18px;
+}
+
+.confirmation__message {
+  background: rgba(0, 208, 253, 0.05);
+  border-left: 4px solid var(--color-primary);
+  border-radius: 4px;
+  padding: 20px;
+  margin-bottom: 30px;
+  text-align: left;
+}
+
+.confirmation__message p {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.confirmation__message strong {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.confirmation__actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.confirmation__btn {
+  padding: 14px 24px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: none;
+}
+
+.confirmation__btn--primary {
+  background: var(--color-primary);
+  color: white;
+}
+
+.confirmation__btn--primary:hover {
+  background: #00a8d8;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 208, 253, 0.3);
+}
+
+.confirmation__btn--secondary {
+  background: transparent;
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+}
+
+.confirmation__btn--secondary:hover {
+  background: rgba(0, 208, 253, 0.05);
+  transform: translateY(-2px);
+}
+.btn-grey{
+  background-color: #ffffff;
+  color: rgb(48, 48, 48);
+}
+.btn-grey:hover{
+  background-color: #e6e6e6;
+  color: rgb(48, 48, 48);
+}
+.btn-grey:active{
+  background-color: #3d3d3d;
+ color: rgb(48, 48, 48);
+}
+
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .confirmation__container {
+    min-height: calc(100vh - 120px);
+    padding: 30px 16px;
+  }
+
+  .confirmation__box {
+    padding: 40px 24px;
+  }
+
+  .confirmation__icon svg {
+    width: 60px;
+    height: 60px;
+  }
+
+  .confirmation__title {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  .confirmation__subtitle {
+    font-size: 14px;
+    margin-bottom: 30px;
+  }
+
+  .confirmation__details {
+    padding: 20px;
+  }
+
+  .confirmation__detail-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .confirmation__message {
+    padding: 16px;
+    font-size: 13px;
+  }
+
+  .confirmation__actions {
+    gap: 10px;
+  }
+
+  .confirmation__btn {
+    padding: 12px 20px;
+    font-size: 14px;
+  }
 }

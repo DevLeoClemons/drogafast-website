@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Usuários - Admin DrogaFast</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Funnel+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/variables.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="icon" href="img/page_icon.ico" type="image/x-icon" />
+  </head>
+  <body>
+    <div class="dashboard__wrapper">
+      <!-- Sidebar -->
+      <aside class="dashboard__sidebar">
+        <div class="dashboard__logo">
+          <h1>DrogaFast Admin</h1>
+        </div>
+        
+        <nav class="dashboard__nav">
+          <a href="dashboard.html" class="dashboard__nav-item">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M3 13h8V3H3v10zm0 8h8v-6H3v6zm10 0h8V11h-8v10zm0-18v6h8V3h-8z" fill="currentColor"></path>
+            </svg>
+            <span>Dashboard</span>
+          </a>
+          <a href="admin-pedidos.html" class="dashboard__nav-item">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-1-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.16.12-.33.12-.5 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z" fill="currentColor"></path>
+            </svg>
+            <span>Pedidos</span>
+          </a>
+          <a href="admin-produtos.html" class="dashboard__nav-item">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" fill="currentColor"></path>
+            </svg>
+            <span>Produtos</span>
+          </a>
+          <a href="admin-usuarios.html" class="dashboard__nav-item dashboard__nav-item--active">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" fill="currentColor"></path>
+            </svg>
+            <span>Usuários</span>
+          </a>
+          <a href="admin-relatorios.html" class="dashboard__nav-item">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M3 13h2v8H3zm4-8h2v16H7zm4-2h2v18h-2zm4 4h2v14h-2zm4-4h2v18h-2z" fill="currentColor"></path>
+            </svg>
+            <span>Relatórios</span>
+          </a>
+          <a href="admin-configuracoes.html" class="dashboard__nav-item">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z" fill="currentColor"></path>
+            </svg>
+            <span>Configurações</span>
+          </a>
+        </nav>
+
+        <div class="dashboard__sidebar-footer">
+          <button class="dashboard__logout" onclick="window.location.href='index.html'">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M17 7l-1.41 1.41L18.17 11H8v2h10.17l-2.58 2.58L17 17l5-5zM4 5h8V3H4c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h8v-2H4V5z" fill="currentColor"></path>
+            </svg>
+            Sair
+          </button>
+        </div>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="dashboard__main">
+        <header class="dashboard__header">
+          <h1 class="dashboard__page-title">Gerenciar Usuários</h1>
+          <div class="dashboard__header-right">
+            <input type="text" class="dashboard__search" id="searchInput" placeholder="Buscar por nome ou email..." />
+            <button class="dashboard__btn-add" type="button" onclick="openAddUserModal()">
+              <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"></path>
+              </svg>
+              Novo Usuário
+            </button>
+          </div>
+        </header>
+
+        <div class="dashboard__content">
+          <!-- Filters -->
+          <div class="dashboard__filters">
+            <button class="dashboard__filter-btn dashboard__filter-btn--active" onclick="filterUsers('all')">Todos</button>
+            <button class="dashboard__filter-btn" onclick="filterUsers('active')">Ativos</button>
+            <button class="dashboard__filter-btn" onclick="filterUsers('inactive')">Inativos</button>
+            <button class="dashboard__filter-btn" onclick="filterUsers('admin')">Administradores</button>
+          </div>
+
+          <!-- Users Table -->
+          <section class="dashboard__users-section">
+            <div class="dashboard__table-container">
+              <table class="dashboard__table">
+                <thead>
+                  <tr>
+                    <th>Avatar</th>
+                    <th>Nome</th>
+                    <th>Email</th>
+                    <th>Telefone</th>
+                    <th>Data de Cadastro</th>
+                    <th>Status</th>
+                    <th>Ações</th>
+                  </tr>
+                </thead>
+                <tbody id="userList">
+                  <tr class="user-row" data-status="active">
+                    <td><div class="dashboard__user-avatar">JS</div></td>
+                    <td>João Silva</td>
+                    <td>joao@email.com</td>
+                    <td>(11) 98765-4321</td>
+                    <td>12/01/2024</td>
+                    <td><span class="dashboard__status dashboard__status--delivered">Ativo</span></td>
+                    <td class="dashboard__actions-cell">
+                      <button class="dashboard__action-btn" type="button" title="Editar" onclick="openEditUserModal(1)">✏️</button>
+                      <button class="dashboard__action-btn dashboard__action-btn--delete" type="button" title="Deletar" onclick="deleteUser(1)">🗑️</button>
+                    </td>
+                  </tr>
+                  <tr class="user-row" data-status="active">
+                    <td><div class="dashboard__user-avatar">MS</div></td>
+                    <td>Maria Santos</td>
+                    <td>maria@email.com</td>
+                    <td>(21) 99876-5432</td>
+                    <td>10/01/2024</td>
+                    <td><span class="dashboard__status dashboard__status--delivered">Ativo</span></td>
+                    <td class="dashboard__actions-cell">
+                      <button class="dashboard__action-btn" type="button" title="Editar" onclick="openEditUserModal(2)">✏️</button>
+                      <button class="dashboard__action-btn dashboard__action-btn--delete" type="button" title="Deletar" onclick="deleteUser(2)">🗑️</button>
+                    </td>
+                  </tr>
+                  <tr class="user-row" data-status="admin">
+                    <td><div class="dashboard__user-avatar" style="background: #FF9800;">CO</div></td>
+                    <td>Carlos Oliveira</td>
+                    <td>carlos@admin.com</td>
+                    <td>(31) 98765-1234</td>
+                    <td>08/01/2024</td>
+                    <td><span class="dashboard__status" style="background: #FFB74D; color: #333;">Admin</span></td>
+                    <td class="dashboard__actions-cell">
+                      <button class="dashboard__action-btn" type="button" title="Editar" onclick="openEditUserModal(3)">✏️</button>
+                      <button class="dashboard__action-btn dashboard__action-btn--delete" type="button" title="Deletar" onclick="deleteUser(3)">🗑️</button>
+                    </td>
+                  </tr>
+                  <tr class="user-row" data-status="active">
+                    <td><div class="dashboard__user-avatar">AC</div></td>
+                    <td>Ana Costa</td>
+                    <td>ana@email.com</td>
+                    <td>(41) 99876-4321</td>
+                    <td>05/01/2024</td>
+                    <td><span class="dashboard__status dashboard__status--delivered">Ativo</span></td>
+                    <td class="dashboard__actions-cell">
+                      <button class="dashboard__action-btn" type="button" title="Editar" onclick="openEditUserModal(4)">✏️</button>
+                      <button class="dashboard__action-btn dashboard__action-btn--delete" type="button" title="Deletar" onclick="deleteUser(4)">🗑️</button>
+                    </td>
+                  </tr>
+                  <tr class="user-row" data-status="inactive">
+                    <td><div class="dashboard__user-avatar" style="background: #999;">PF</div></td>
+                    <td>Paulo Ferreira</td>
+                    <td>paulo@email.com</td>
+                    <td>(51) 98765-9876</td>
+                    <td>02/01/2024</td>
+                    <td><span class="dashboard__status dashboard__status--cancelled">Inativo</span></td>
+                    <td class="dashboard__actions-cell">
+                      <button class="dashboard__action-btn" type="button" title="Editar" onclick="openEditUserModal(5)">✏️</button>
+                      <button class="dashboard__action-btn dashboard__action-btn--delete" type="button" title="Deletar" onclick="deleteUser(5)">🗑️</button>
+                    </td>
+                  </tr>
+                  <tr class="user-row" data-status="active">
+                    <td><div class="dashboard__user-avatar">LM</div></td>
+                    <td>Lucia Martins</td>
+                    <td>lucia@email.com</td>
+                    <td>(61) 98765-5432</td>
+                    <td>01/01/2024</td>
+                    <td><span class="dashboard__status dashboard__status--delivered">Ativo</span></td>
+                    <td class="dashboard__actions-cell">
+                      <button class="dashboard__action-btn" type="button" title="Editar" onclick="openEditUserModal(6)">✏️</button>
+                      <button class="dashboard__action-btn dashboard__action-btn--delete" type="button" title="Deletar" onclick="deleteUser(6)">🗑️</button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+        </div>
+      </main>
+    </div>
+
+    <!-- Modal: Adicionar/Editar Usuário -->
+    <div class="modal" id="userModal">
+      <div class="modal__overlay" onclick="closeUserModal()"></div>
+      <div class="modal__content">
+        <div class="modal__header">
+          <h2 class="modal__title" id="modalTitle">Novo Usuário</h2>
+          <button class="modal__close" type="button" onclick="closeUserModal()">✕</button>
+        </div>
+
+        <form class="modal__form" id="userForm">
+          <div class="form__row">
+            <div class="form__group form__group--half">
+              <label for="userName" class="form__label">Nome *</label>
+              <input type="text" id="userName" class="form__input" placeholder="Ex: João Silva" required>
+            </div>
+
+            <div class="form__group form__group--half">
+              <label for="userEmail" class="form__label">Email *</label>
+              <input type="email" id="userEmail" class="form__input" placeholder="Ex: joao@email.com" required>
+            </div>
+          </div>
+
+          <div class="form__row">
+            <div class="form__group form__group--half">
+              <label for="userPhone" class="form__label">Telefone</label>
+              <input type="tel" id="userPhone" class="form__input" placeholder="Ex: (11) 98765-4321">
+            </div>
+
+            <div class="form__group form__group--half">
+              <label for="userRole" class="form__label">Função *</label>
+              <select id="userRole" class="form__input" required>
+                <option value="">Selecione uma função</option>
+                <option value="customer">Cliente</option>
+                <option value="moderator">Moderador</option>
+                <option value="admin">Administrador</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form__row">
+            <div class="form__group form__group--half">
+              <label for="userPassword" class="form__label">Senha *</label>
+              <input type="password" id="userPassword" class="form__input" placeholder="Deixe em branco para gerar automaticamente" required>
+            </div>
+
+            <div class="form__group form__group--half">
+              <label for="userStatus" class="form__label">Status *</label>
+              <select id="userStatus" class="form__input" required>
+                <option value="active">Ativo</option>
+                <option value="inactive">Inativo</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form__group">
+            <label class="form__checkbox">
+              <input type="checkbox" id="userNotify" checked>
+              Enviar email de bem-vindo
+            </label>
+          </div>
+
+          <div class="modal__footer">
+            <button type="button" class="btn btn--secondary" onclick="closeUserModal()">Cancelar</button>
+            <button type="submit" class="btn btn--primary">Salvar Usuário</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Modal: Confirmar Exclusão -->
+    <div class="modal" id="deleteModal">
+      <div class="modal__overlay" onclick="closeDeleteModal()"></div>
+      <div class="modal__content modal__content--small">
+        <div class="modal__header">
+          <h2 class="modal__title">Confirmar Exclusão</h2>
+          <button class="modal__close" type="button" onclick="closeDeleteModal()">✕</button>
+        </div>
+
+        <div class="modal__body">
+          <p>Tem certeza que deseja deletar este usuário? Esta ação não pode ser desfeita.</p>
+        </div>
+
+        <div class="modal__footer">
+          <button type="button" class="btn btn--secondary" onclick="closeDeleteModal()">Cancelar</button>
+          <button type="button" class="btn btn--danger" id="confirmDeleteBtn">Deletar</button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      let editingUserId = null;
+      let deletingUserId = null;
+
+      function filterUsers(status) {
+        const rows = document.querySelectorAll('.user-row');
+        const buttons = document.querySelectorAll('.dashboard__filter-btn');
+
+        buttons.forEach(btn => btn.classList.remove('dashboard__filter-btn--active'));
+        event.target.classList.add('dashboard__filter-btn--active');
+
+        rows.forEach(row => {
+          if (status === 'all') {
+            row.style.display = '';
+          } else {
+            row.style.display = row.dataset.status === status ? '' : 'none';
+          }
+        });
+      }
+
+      function openAddUserModal() {
+        editingUserId = null;
+        document.getElementById('modalTitle').textContent = 'Novo Usuário';
+        document.getElementById('userForm').reset();
+        document.getElementById('userModal').classList.add('modal--active');
+      }
+
+      function openEditUserModal(id) {
+        editingUserId = id;
+        document.getElementById('modalTitle').textContent = 'Editar Usuário';
+        document.getElementById('userModal').classList.add('modal--active');
+      }
+
+      function closeUserModal() {
+        document.getElementById('userModal').classList.remove('modal--active');
+      }
+
+      function deleteUser(id) {
+        deletingUserId = id;
+        document.getElementById('deleteModal').classList.add('modal--active');
+      }
+
+      function closeDeleteModal() {
+        document.getElementById('deleteModal').classList.remove('modal--active');
+      }
+
+      document.getElementById('confirmDeleteBtn').addEventListener('click', function() {
+        if (deletingUserId) {
+          const rows = document.querySelectorAll('.user-row');
+          rows.forEach((row, index) => {
+            if (index === deletingUserId - 1) row.remove();
+          });
+          closeDeleteModal();
+          alert('Usuário deletado com sucesso!');
+        }
+      });
+
+      document.getElementById('userForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        if (editingUserId) {
+          alert('Usuário atualizado com sucesso!');
+        } else {
+          alert('Usuário adicionado com sucesso!');
+        }
+        closeUserModal();
+      });
+
+      // Busca
+      document.getElementById('searchInput').addEventListener('input', function(e) {
+        const searchTerm = e.target.value.toLowerCase();
+        const rows = document.querySelectorAll('.user-row');
+        rows.forEach(row => {
+          const text = row.textContent.toLowerCase();
+          row.style.display = text.includes(searchTerm) ? '' : 'none';
+        });
+      });
+    </script>
+  </body>
+</html>

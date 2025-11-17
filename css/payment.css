@@ -16,11 +16,7 @@ body {
   display: flex;
 }
 
-.div-support-header{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+
 
 .payment-container {
   width: 420px;
@@ -86,6 +82,7 @@ padding: 12px;
   gap: 12px;
   margin-bottom: 14px;
   max-width: 420px;
+  width: 100%;
   
 }
 
@@ -107,8 +104,9 @@ footer.position-absolute{
   bottom: 0px;
 
 }
-.white-left{
+.main{
   justify-items: center;
+  margin-top: 20px;
 }
 .data-cart{
   display: flex;
@@ -131,6 +129,42 @@ align-items: center;
 gap: 60px;
 left: 50%;
 }
+.total{
+  display: flex;
+  background-color: rgb(249, 249, 249);
+  margin-bottom: 20px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 10px 15px 10px;
+  border-radius: 10px;
+  border: 1px solid rgb(171, 171, 171);
+}
+.p-text{
+font-weight: 700;
+}
+.btn-container{
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  margin-top: 20px;
+}
+.btn1{
+  width: 50%;
+}
+.btn-grey{
+  background-color: #ffffff;
+  color: rgb(48, 48, 48);
+}
+.btn-grey:hover{
+  background-color: #e6e6e6;
+  color: rgb(48, 48, 48);
+}
+.btn-grey:active{
+  background-color: #3d3d3d;
+ color: rgb(48, 48, 48);
+}
+
+
 
 
 @media (max-width: 850px) {

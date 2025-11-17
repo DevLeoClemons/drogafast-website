@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Confirmação de Compra</title>
+    <title>Acompanhamento de Pedido</title>
 
     <link href="https://fonts.googleapis.com/css2?family=Funnel+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
 
@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="css/components/header.css" />
     <link rel="stylesheet" href="css/components/nav.css" />
     <link rel="stylesheet" href="css/components/footer.css" />
-    <link rel="stylesheet" href="css/confirmation.css">
+    <link rel="stylesheet" href="css/acompanhamento.css">
     <link rel="icon" href="img/page_icon.ico" type="image/x-icon" />
   </head>
   <body>
@@ -138,45 +138,136 @@
       </div>
     </header>
 
-    <main class="confirmation__container">
-      <div class="confirmation__box">
-        <div class="confirmation__icon">
-          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-            <g id="SVGRepo_iconCarrier">
-              <path d="M7 12L10.293 15.293a1 1 0 001.414 0L17 9" stroke="#00D0FD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-              <circle cx="12" cy="12" r="9" stroke="#00D0FD" stroke-width="2"></circle>
-            </g>
-          </svg>
+    <main class="tracking__container">
+      <div class="tracking__content">
+        <div class="tracking__header">
+          <h1 class="tracking__title">Acompanhamento do Pedido</h1>
+          <p class="tracking__order-id">Pedido #DF-2024-001256</p>
         </div>
 
-        <h1 class="confirmation__title">Pedido Confirmado!</h1>
-
-        <p class="confirmation__subtitle">Seu pedido foi recebido e o pagamento foi autorizado com sucesso.</p>
-
-        <div class="confirmation__details">
-          <div class="confirmation__detail-item">
-            <span class="confirmation__label">Número do Pedido:</span>
-            <span class="confirmation__value">#DF-2024-001256</span>
+        <div class="tracking__timeline">
+          <div class="tracking__step tracking__step--completed">
+            <div class="tracking__step-icon">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                <g id="SVGRepo_iconCarrier">
+                  <path d="M7 12L10.293 15.293a1 1 0 001.414 0L17 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                  <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"></circle>
+                </g>
+              </svg>
+            </div>
+            <div class="tracking__step-content">
+              <h3 class="tracking__step-title">Pedido Confirmado</h3>
+              <p class="tracking__step-date">15 de nov, 2024 às 14:30</p>
+            </div>
           </div>
-          <div class="confirmation__detail-item">
-            <span class="confirmation__label">Data do Pedido:</span>
-            <span class="confirmation__value">15 de novembro de 2025</span>
+
+          <div class="tracking__step tracking__step--completed">
+            <div class="tracking__step-icon">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                <g id="SVGRepo_iconCarrier">
+                  <path d="M9 12l2 2 4-4m7 0a9 9 0 11-18 0 9 9 0 0118 0z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                </g>
+              </svg>
+            </div>
+            <div class="tracking__step-content">
+              <h3 class="tracking__step-title">Pagamento Aprovado</h3>
+              <p class="tracking__step-date">15 de nov, 2024 às 14:35</p>
+            </div>
           </div>
-          <div class="confirmation__detail-item">
-            <span class="confirmation__label">Valor Total:</span>
-            <span class="confirmation__value confirmation__value--highlight">R$ 129,90</span>
+
+          <div class="tracking__step tracking__step--completed">
+            <div class="tracking__step-icon">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                <g id="SVGRepo_iconCarrier">
+                  <path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                </g>
+              </svg>
+            </div>
+            <div class="tracking__step-content">
+              <h3 class="tracking__step-title">Preparando Pedido</h3>
+              <p class="tracking__step-date">15 de nov, 2024 às 15:00</p>
+            </div>
+          </div>
+
+          <div class="tracking__step tracking__step--active">
+            <div class="tracking__step-icon">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                <g id="SVGRepo_iconCarrier">
+                  <path d="M13 10V3L4 14h7v7l9-11h-7z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="currentColor"></path>
+                </g>
+              </svg>
+            </div>
+            <div class="tracking__step-content">
+              <h3 class="tracking__step-title">Saiu para Entrega</h3>
+              <p class="tracking__step-date">15 de nov, 2024 às 16:45</p>
+            </div>
+          </div>
+
+          <div class="tracking__step">
+            <div class="tracking__step-icon">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                <g id="SVGRepo_iconCarrier">
+                  <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                </g>
+              </svg>
+            </div>
+            <div class="tracking__step-content">
+              <h3 class="tracking__step-title">Entregue</h3>
+              <p class="tracking__step-date">Previsto para hoje</p>
+            </div>
           </div>
         </div>
 
-        <div class="confirmation__message">
-          <p>Um e-mail de confirmação foi enviado para seu cadastro. Acompanhe sua entrega na seção <strong>"Acompanhar pedidos"</strong> no menu superior.</p>
+        <div class="tracking__info-box">
+          <h2 class="tracking__info-title">Informações do Pedido</h2>
+          <div class="tracking__info-grid">
+            <div class="tracking__info-item">
+              <span class="tracking__info-label">Data do Pedido:</span>
+              <span class="tracking__info-value">15 de novembro de 2024</span>
+            </div>
+            <div class="tracking__info-item">
+              <span class="tracking__info-label">Data Prevista de Entrega:</span>
+              <span class="tracking__info-value">15 de novembro de 2024</span>
+            </div>
+            <div class="tracking__info-item">
+              <span class="tracking__info-label">Endereço de Entrega:</span>
+              <span class="tracking__info-value">QS 07, Lote 01, EPCT, Brasília-DF</span>
+            </div>
+            <div class="tracking__info-item">
+              <span class="tracking__info-label">Valor Total:</span>
+              <span class="tracking__info-value tracking__info-value--highlight">R$ 129,90</span>
+            </div>
+          </div>
         </div>
 
-        <div class="confirmation__actions">
-          <a href="index.html" class="btn">Continuar Comprando</a>
-          <a href="acompanhamento.html" class="btn btn-grey">Acompanhar Pedido</a>
+        <div class="tracking__product-box">
+          <h2 class="tracking__product-title">Produtos do Pedido</h2>
+          <div class="tracking__product-item">
+            <img src="img/card_prod_1.png" alt="Fralda Pampers — 50 unidades" class="tracking__product-img" loading="lazy">
+            <div class="tracking__product-details">
+              <h3 class="tracking__product-name">Fralda Pampers</h3>
+              <p class="tracking__product-desc">50 unidades</p>
+              <p class="tracking__product-qty">Quantidade: 1</p>
+            </div>
+            <div class="tracking__product-price">
+              <p class="tracking__product-value">R$ 129,90</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="tracking__actions">
+          <a href="index.html" class="btn cart__btn--proceed">Continuar Comprando</a>
+          <a href="#" class="btn cart__btn--continue btn-grey">Contatar Suporte</a>
         </div>
       </div>
     </main>
@@ -192,12 +283,5 @@
       </button>
     </footer>
 
-    <script>
-      document.getElementById('order-date').textContent = new Date().toLocaleDateString('pt-BR', { 
-        year: 'numeric', 
-        month: 'long', 
-        day: 'numeric' 
-      });
-    </script>
   </body>
 </html>

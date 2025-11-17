@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pedidos - Admin DrogaFast</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Funnel+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/variables.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="icon" href="img/page_icon.ico" type="image/x-icon" />
+  </head>
+  <body>
+    <div class="dashboard__wrapper">
+      <!-- Sidebar -->
+      <aside class="dashboard__sidebar">
+        <div class="dashboard__logo">
+          <h1>DrogaFast Admin</h1>
+        </div>
+        
+        <nav class="dashboard__nav">
+          <a href="dashboard.html" class="dashboard__nav-item">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M3 13h8V3H3v10zm0 8h8v-6H3v6zm10 0h8V11h-8v10zm0-18v6h8V3h-8z" fill="currentColor"></path>
+            </svg>
+            <span>Dashboard</span>
+          </a>
+          <a href="admin-pedidos.html" class="dashboard__nav-item dashboard__nav-item--active">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-1-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.16.12-.33.12-.5 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z" fill="currentColor"></path>
+            </svg>
+            <span>Pedidos</span>
+          </a>
+          <a href="admin-produtos.html" class="dashboard__nav-item">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" fill="currentColor"></path>
+            </svg>
+            <span>Produtos</span>
+          </a>
+          <a href="admin-usuarios.html" class="dashboard__nav-item">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" fill="currentColor"></path>
+            </svg>
+            <span>Usuários</span>
+          </a>
+          <a href="admin-relatorios.html" class="dashboard__nav-item">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M3 13h2v8H3zm4-8h2v16H7zm4-2h2v18h-2zm4 4h2v14h-2zm4-4h2v18h-2z" fill="currentColor"></path>
+            </svg>
+            <span>Relatórios</span>
+          </a>
+          <a href="admin-configuracoes.html" class="dashboard__nav-item">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z" fill="currentColor"></path>
+            </svg>
+            <span>Configurações</span>
+          </a>
+        </nav>
+
+        <div class="dashboard__sidebar-footer">
+          <button class="dashboard__logout" onclick="window.location.href='index.html'">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M17 7l-1.41 1.41L18.17 11H8v2h10.17l-2.58 2.58L17 17l5-5zM4 5h8V3H4c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h8v-2H4V5z" fill="currentColor"></path>
+            </svg>
+            Sair
+          </button>
+        </div>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="dashboard__main">
+        <header class="dashboard__header">
+          <h1 class="dashboard__page-title">Gerenciar Pedidos</h1>
+          <div class="dashboard__header-right">
+            <input type="text" class="dashboard__search" id="searchInput" placeholder="Buscar por ID ou cliente..." />
+          </div>
+        </header>
+
+        <div class="dashboard__content">
+          <!-- Filters -->
+          <div class="dashboard__filters">
+            <button class="dashboard__filter-btn dashboard__filter-btn--active" onclick="filterOrders('all')">Todos</button>
+            <button class="dashboard__filter-btn" onclick="filterOrders('pending')">Pendentes</button>
+            <button class="dashboard__filter-btn" onclick="filterOrders('shipped')">Enviados</button>
+            <button class="dashboard__filter-btn" onclick="filterOrders('delivered')">Entregues</button>
+            <button class="dashboard__filter-btn" onclick="filterOrders('cancelled')">Cancelados</button>
+          </div>
+
+          <!-- Orders Table -->
+          <section class="dashboard__orders-section">
+            <div class="dashboard__table-container">
+              <table class="dashboard__table">
+                <thead>
+                  <tr>
+                    <th>ID do Pedido</th>
+                    <th>Cliente</th>
+                    <th>Data</th>
+                    <th>Valor</th>
+                    <th>Status</th>
+                    <th>Ações</th>
+                  </tr>
+                </thead>
+                <tbody id="orderList">
+                  <tr class="order-row" data-status="delivered">
+                    <td>#PED001</td>
+                    <td>João Silva</td>
+                    <td>15/01/2024</td>
+                    <td>R$ 289,90</td>
+                    <td><span class="dashboard__status dashboard__status--delivered">Entregue</span></td>
+                    <td class="dashboard__actions-cell">
+                      <button class="dashboard__action-btn" type="button" title="Visualizar" onclick="viewOrder(1)">👁️</button>
+                      <button class="dashboard__action-btn" type="button" title="Editar" onclick="openEditOrderModal(1)">✏️</button>
+                    </td>
+                  </tr>
+                  <tr class="order-row" data-status="shipped">
+                    <td>#PED002</td>
+                    <td>Maria Santos</td>
+                    <td>16/01/2024</td>
+                    <td>R$ 156,50</td>
+                    <td><span class="dashboard__status dashboard__status--shipped">Enviado</span></td>
+                    <td class="dashboard__actions-cell">
+                      <button class="dashboard__action-btn" type="button" title="Visualizar" onclick="viewOrder(2)">👁️</button>
+                      <button class="dashboard__action-btn" type="button" title="Editar" onclick="openEditOrderModal(2)">✏️</button>
+                    </td>
+                  </tr>
+                  <tr class="order-row" data-status="pending">
+                    <td>#PED003</td>
+                    <td>Carlos Oliveira</td>
+                    <td>17/01/2024</td>
+                    <td>R$ 428,75</td>
+                    <td><span class="dashboard__status dashboard__status--pending">Pendente</span></td>
+                    <td class="dashboard__actions-cell">
+                      <button class="dashboard__action-btn" type="button" title="Visualizar" onclick="viewOrder(3)">👁️</button>
+                      <button class="dashboard__action-btn" type="button" title="Editar" onclick="openEditOrderModal(3)">✏️</button>
+                    </td>
+                  </tr>
+                  <tr class="order-row" data-status="delivered">
+                    <td>#PED004</td>
+                    <td>Ana Costa</td>
+                    <td>18/01/2024</td>
+                    <td>R$ 195,00</td>
+                    <td><span class="dashboard__status dashboard__status--delivered">Entregue</span></td>
+                    <td class="dashboard__actions-cell">
+                      <button class="dashboard__action-btn" type="button" title="Visualizar" onclick="viewOrder(4)">👁️</button>
+                      <button class="dashboard__action-btn" type="button" title="Editar" onclick="openEditOrderModal(4)">✏️</button>
+                    </td>
+                  </tr>
+                  <tr class="order-row" data-status="pending">
+                    <td>#PED005</td>
+                    <td>Paulo Ferreira</td>
+                    <td>19/01/2024</td>
+                    <td>R$ 312,60</td>
+                    <td><span class="dashboard__status dashboard__status--pending">Pendente</span></td>
+                    <td class="dashboard__actions-cell">
+                      <button class="dashboard__action-btn" type="button" title="Visualizar" onclick="viewOrder(5)">👁️</button>
+                      <button class="dashboard__action-btn" type="button" title="Editar" onclick="openEditOrderModal(5)">✏️</button>
+                    </td>
+                  </tr>
+                  <tr class="order-row" data-status="cancelled">
+                    <td>#PED006</td>
+                    <td>Lucia Martins</td>
+                    <td>20/01/2024</td>
+                    <td>R$ 89,90</td>
+                    <td><span class="dashboard__status dashboard__status--cancelled">Cancelado</span></td>
+                    <td class="dashboard__actions-cell">
+                      <button class="dashboard__action-btn" type="button" title="Visualizar" onclick="viewOrder(6)">👁️</button>
+                      <button class="dashboard__action-btn" type="button" title="Editar" onclick="openEditOrderModal(6)">✏️</button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+        </div>
+      </main>
+    </div>
+
+    <!-- Modal: Visualizar Pedido -->
+    <div class="modal" id="viewOrderModal">
+      <div class="modal__overlay" onclick="closeViewModal()"></div>
+      <div class="modal__content">
+        <div class="modal__header">
+          <h2 class="modal__title" id="orderTitle">Detalhes do Pedido</h2>
+          <button class="modal__close" type="button" onclick="closeViewModal()">✕</button>
+        </div>
+
+        <div class="modal__body">
+          <div class="order-detail-grid">
+            <div class="order-detail-item">
+              <h4>Cliente</h4>
+              <p id="orderCustomer">-</p>
+            </div>
+            <div class="order-detail-item">
+              <h4>Email</h4>
+              <p id="orderEmail">-</p>
+            </div>
+            <div class="order-detail-item">
+              <h4>Telefone</h4>
+              <p id="orderPhone">-</p>
+            </div>
+            <div class="order-detail-item">
+              <h4>Data do Pedido</h4>
+              <p id="orderDate">-</p>
+            </div>
+          </div>
+
+          <div style="margin-top: 20px; border-top: 1px solid #e0e0e0; padding-top: 20px;">
+            <h4>Itens do Pedido</h4>
+            <table style="width: 100%; margin-top: 12px;">
+              <thead>
+                <tr style="border-bottom: 2px solid #00D0FD;">
+                  <th style="text-align: left; padding: 8px;">Produto</th>
+                  <th style="text-align: center; padding: 8px;">Qtd</th>
+                  <th style="text-align: right; padding: 8px;">Preço</th>
+                </tr>
+              </thead>
+              <tbody id="orderItems">
+              </tbody>
+            </table>
+          </div>
+
+          <div style="margin-top: 20px; padding-top: 20px; border-top: 1px solid #e0e0e0;">
+            <div style="display: grid; grid-template-columns: 1fr 200px; gap: 20px;">
+              <div>
+                <h4>Endereço de Entrega</h4>
+                <p id="orderAddress" style="color: #666; line-height: 1.6;">-</p>
+              </div>
+              <div style="text-align: right;">
+                <p style="margin: 8px 0; color: #666;">Subtotal: <strong id="orderSubtotal">R$ 0,00</strong></p>
+                <p style="margin: 8px 0; color: #666;">Frete: <strong id="orderShipping">R$ 0,00</strong></p>
+                <p style="margin: 8px 0; font-size: 16px; font-weight: 700; color: #1a1a1a;">Total: <strong id="orderTotal">R$ 0,00</strong></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal__footer">
+          <button type="button" class="btn btn--secondary" onclick="closeViewModal()">Fechar</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal: Editar Pedido -->
+    <div class="modal" id="editOrderModal">
+      <div class="modal__overlay" onclick="closeEditModal()"></div>
+      <div class="modal__content">
+        <div class="modal__header">
+          <h2 class="modal__title">Editar Status do Pedido</h2>
+          <button class="modal__close" type="button" onclick="closeEditModal()">✕</button>
+        </div>
+
+        <form class="modal__form" id="editOrderForm">
+          <div class="form__group">
+            <label for="orderStatus" class="form__label">Status do Pedido *</label>
+            <select id="orderStatus" class="form__input" required>
+              <option value="">Selecione um status</option>
+              <option value="pending">Pendente</option>
+              <option value="shipped">Enviado</option>
+              <option value="delivered">Entregue</option>
+              <option value="cancelled">Cancelado</option>
+            </select>
+          </div>
+
+          <div class="form__group">
+            <label for="trackingCode" class="form__label">Código de Rastreamento</label>
+            <input type="text" id="trackingCode" class="form__input" placeholder="Ex: BR123456789ABC">
+          </div>
+
+          <div class="form__group">
+            <label for="orderNotes" class="form__label">Observações</label>
+            <textarea id="orderNotes" class="form__input form__textarea" placeholder="Adicione notas sobre este pedido..." rows="4"></textarea>
+          </div>
+
+          <div class="modal__footer">
+            <button type="button" class="btn btn--secondary" onclick="closeEditModal()">Cancelar</button>
+            <button type="submit" class="btn btn--primary">Atualizar Pedido</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script>
+      let currentOrderId = null;
+
+      function filterOrders(status) {
+        const rows = document.querySelectorAll('.order-row');
+        const buttons = document.querySelectorAll('.dashboard__filter-btn');
+
+        buttons.forEach(btn => btn.classList.remove('dashboard__filter-btn--active'));
+        event.target.classList.add('dashboard__filter-btn--active');
+
+        rows.forEach(row => {
+          if (status === 'all') {
+            row.style.display = '';
+          } else {
+            row.style.display = row.dataset.status === status ? '' : 'none';
+          }
+        });
+      }
+
+      function viewOrder(id) {
+        currentOrderId = id;
+        const orderData = {
+          1: { customer: 'João Silva', email: 'joao@email.com', phone: '(11) 98765-4321', date: '15/01/2024', address: 'Rua A, 123 - São Paulo, SP - CEP: 01234-567', items: [{ name: 'Fralda Pampers 50un', qty: 2, price: '129,90' }, { name: 'Fralda Pampers 50un', qty: 1, price: '129,90' }], subtotal: '388,70', shipping: '0,00', total: '388,70' },
+          2: { customer: 'Maria Santos', email: 'maria@email.com', phone: '(21) 99876-5432', date: '16/01/2024', address: 'Av. B, 456 - Rio de Janeiro, RJ - CEP: 20000-000', items: [{ name: 'Fralda Pampers 50un', qty: 1, price: '129,90' }, { name: 'Fralda Pampers 50un', qty: 1, price: '129,90' }], subtotal: '259,80', shipping: '0,00', total: '259,80' }
+        };
+
+        const order = orderData[id] || orderData[1];
+        document.getElementById('orderTitle').textContent = `Pedido #PED${String(id).padStart(3, '0')}`;
+        document.getElementById('orderCustomer').textContent = order.customer;
+        document.getElementById('orderEmail').textContent = order.email;
+        document.getElementById('orderPhone').textContent = order.phone;
+        document.getElementById('orderDate').textContent = order.date;
+        document.getElementById('orderAddress').textContent = order.address;
+        document.getElementById('orderSubtotal').textContent = `R$ ${order.subtotal}`;
+        document.getElementById('orderShipping').textContent = `R$ ${order.shipping}`;
+        document.getElementById('orderTotal').textContent = `R$ ${order.total}`;
+
+        const itemsHtml = order.items.map(item => `
+          <tr style="border-bottom: 1px solid #e0e0e0;">
+            <td style="padding: 12px 8px;">${item.name}</td>
+            <td style="text-align: center; padding: 12px 8px;">${item.qty}</td>
+            <td style="text-align: right; padding: 12px 8px;">R$ ${item.price}</td>
+          </tr>
+        `).join('');
+        document.getElementById('orderItems').innerHTML = itemsHtml;
+
+        document.getElementById('viewOrderModal').classList.add('modal--active');
+      }
+
+      function closeViewModal() {
+        document.getElementById('viewOrderModal').classList.remove('modal--active');
+      }
+
+      function openEditOrderModal(id) {
+        closeViewModal();
+        currentOrderId = id;
+        document.getElementById('editOrderForm').reset();
+        document.getElementById('editOrderModal').classList.add('modal--active');
+      }
+
+      function closeEditModal() {
+        document.getElementById('editOrderModal').classList.remove('modal--active');
+      }
+
+      document.getElementById('editOrderForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const status = document.getElementById('orderStatus').value;
+        alert(`Pedido #PED${String(currentOrderId).padStart(3, '0')} atualizado para "${status}" com sucesso!`);
+        closeEditModal();
+      });
+
+      // Busca
+      document.getElementById('searchInput').addEventListener('input', function(e) {
+        const searchTerm = e.target.value.toLowerCase();
+        const rows = document.querySelectorAll('.order-row');
+        rows.forEach(row => {
+          const text = row.textContent.toLowerCase();
+          row.style.display = text.includes(searchTerm) ? '' : 'none';
+        });
+      });
+    </script>
+  </body>
+</html>

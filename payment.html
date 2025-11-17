@@ -15,11 +15,12 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" />
 
-    <link rel="stylesheet" href="css/variables.css" />
-		<link rel="stylesheet" href="css/base.css" />
-		<link rel="stylesheet" href="css/components/buttons.css" />
-		<link rel="stylesheet" href="css/components/header.css" />
-		<link rel="stylesheet" href="css/components/footer.css" />
+     <link rel="stylesheet" href="css/variables.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/components/buttons.css" />
+    <link rel="stylesheet" href="css/components/footer.css" />
+    <link rel="stylesheet" href="css/components/header.css" />
+    <link rel="stylesheet" href="css/components/form.css" />
     <link rel="stylesheet" href="css/payment.css">
 
     <link rel="icon" href="img/page_icon.ico" type="image/x-icon" />
@@ -30,7 +31,7 @@
         <img class="logo" src="img/logo.png" alt="" />
       </div>
 
-      <div class="header__center hide">
+      <div class="header__center">
         <form class="search-form">
           <input type="text" placeholder="Buscar na DrogaFast" />
           <button>
@@ -119,7 +120,7 @@
           </div>
         </button>
 
-        <button class="header__right__btn-cart">
+        <a href="cart.html" class="header__right__btn-cart">
           <svg
             class="header__right__icons"
             viewBox="0 0 24 24"
@@ -146,19 +147,22 @@
             <p class="header__right__lbl__p__top">Carrinho</p>
             <p class="header__right__p__bottom">R$ 0,00</p>
           </div>
-        </button>
+        </a>
       </div>
     </header>
-    <div class="grey-back">
       <main>
-        <div class="white-left">
+        <div class="main">
           <div class="data-cart">
-            <h2 class=" checkout-title h2_login">
-              Forma de entrega
-            </h2>
-            <h3 class="title-medium">
-              Endereço de entrega
-            </h3>
+           <div class="total">
+            <p class="p-text">
+              Total a pagar:
+            </p>
+            <h1>
+              R$ 129,90
+            </h1>
+
+            
+           </div>
             <section class="payment-container">
               <div class="payment-methods">
                 <button class="method active" data-method="credit-card">
@@ -199,104 +203,27 @@
                 </label>
               </form>
             </section>
-          </div>
+            <div class="btn-container">
+              
+               
 
+<a href = "confimation.html" class="btn btn1">
+  Confirmar pagamento
+</a>
+<a href = "checkout.html" class="btn btn1 btn-grey">
+  Voltar para entrega
+</a>
+  
+ </div>
+          </div>
+ 
         </div>
-        <div class="white-right">
+       
 
-          <div>
-            <h3 class="title-medium">
-              Resumo do pedido
-            </h3>
-          </div>
-          <div class="product-value">
-            <p class="light-text">
-              Subtotal (1)
-            </p>
-            <p class="light-text">
-              R$ 129,90
-            </p>
-          </div>
-          <div>
-
-          </div>
-          <div class="product-value2">
-            <p class="light-text start-text">
-              Total
-            </p>
-            <h1 class="h1_products"
-              style="margin: 0;">
-              R$ 129,09
-            </h1>
-          </div>
-          <p class="light-text">
-            1x s/ juros de R$ 129,09
-          </p>
-          <div class="card-body">
-            <a href="confimation.html" class="but-prosseguir">
-									Confirmar pagamento
-								</a>
-            
-            <a href="checkout.html" class="but-continuar-comprando">
-									Voltar para Entrega
-								</a>
-          </div>
-
-        </div>
-
-        <div class="resume-mobile">
-          <div>
-            <h3 class="title-medium">
-              Resumo do pedido
-            </h3>
-          </div>
-          <div class="product-value">
-            <p class="light-text">
-              Subtotal (1)
-            </p>
-            <p class="light-text ">
-              R$ 129,90
-            </p>
-          </div>
-          <div>
-    
-          </div>
-          <div class="product-value2">
-            <p class="light-text start-text">
-              Total
-            </p>
-            <h1 class="h1_products"
-              style="margin: 0;
-                      ">
-              R$ 129,09
-            </h1>
-          </div>
-          <p class="light-text-start">
-            1x s/ juros de R$ 129,09
-          </p>
-          <div class="card-body-mobile">
-            <a href="confimation.html" class="but-prosseguir but-continuar-comprando-mobile">
-                      Confirmar pagamento
-                    </a>
-           
-            <a href="checkout.html" class="but-continuar-comprando but-continuar-comprando-mobile">
-                      Voltar para Entrega
-                    </a>
-          </div>
-        </div>
-
+     
       </main>
-      <!-- <footer class="position-absolute">
-				<button class="card_foo">
-					<img class="lg_card_foo" src="img/headset.svg" alt />
-					Central de Atendimento
-				</button>
-				<button class="card_foo">
-					<img class="lg_card_foo" src="img/download_our_app.svg" alt />
-					Baixe nosso app
-				</button>
-			</footer> -->
-      
+     
+
     </div>
 
     <footer>
@@ -309,6 +236,5 @@
         Baixe nosso app
       </div>
     </footer>
-
   </body>
 </html>
