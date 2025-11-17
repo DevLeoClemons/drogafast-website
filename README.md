@@ -1,40 +1,18 @@
-Ordem dos css
+-------- Como executar --------
 
-1- reset.css
-2- bootstrap.css
-3- base.css
-4- Components (ex: buttons.css, footer.css)
-5- CSS Específico da página (ex: index.css, login.css)
-6- variables.css 
+  Requisitos:
+    
+    - VScode com extensão Live Server instalada
 
-NOMEAÇÃO DE CLASSES
+  1 - Dentro do Vscode
+  2 - Abrir arquivo "index.html"
+  3 - Clique com botão direito em algum espaço vazio da tela
+  3 - Selecione "Open with Live Server"
+  4 - Pronto, Agora o navegador irá abrir com a página inicial do site
 
-🧱 1. BEM (Block, Element, Modifier) — o mais usado
+-------- OBS --------
 
-Formato:
+- Para acessar a página do usuário é necessário manualmente inserir o caminho '/profile.html'
 
-.block {}
-.block__element {}
-.block--modifier {}
-
-
-Exemplo:
-
-<div class="card card--highlighted">
-  <h2 class="card__title">Produto</h2>
-  <p class="card__description">Descrição breve</p>
-</div>
-
-
-Significado:
-
-Block: o componente em si (card)
-
-Element: parte interna do bloco (card__title)
-
-Modifier: variação ou estado do bloco (card--highlighted)
-
-✅ Vantagens: muito legível, evita conflitos de CSS, funciona bem com componentes reutilizáveis.
-💡 Dica: use hífens, evite camelCase.
-
+- Para acessar o CRUDE/Dashboard da Farmácia é necessário manualmente inserir o caminho '/dashboard.html'
 
